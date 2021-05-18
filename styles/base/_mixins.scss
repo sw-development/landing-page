@@ -1,0 +1,38 @@
+// Mixins names to discuss
+
+@mixin mobile(){
+    @media(min-width: 568px){
+        @content
+    }
+};
+
+@mixin tablet(){
+    @media(min-width: 768px){
+        @content
+    }
+};
+
+@mixin largeTablet(){
+    @media(min-width: 992px){
+        @content
+    }
+};
+
+
+@mixin smallDesktop(){
+    @media(min-width: 1200px){
+        @content
+    }
+};
+
+@mixin desktop(){
+    @media(min-width: 1500px){
+        @content
+    }
+};
+
+@mixin largeDesktop(){
+    @media(min-width: 1920px){
+        @content
+    }
+};
