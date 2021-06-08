@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Navigation from '@/../../components/Navigation/index';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
           rel="stylesheet"
         />
       </Head>
+      <Navigation />
     </>
   );
 }
