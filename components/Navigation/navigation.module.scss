@@ -13,7 +13,7 @@
 
   @include largeTablet() {
     transform: translateX(0);
-    height: auto;
+    height: 100px;
     position: static;
   }
 }
