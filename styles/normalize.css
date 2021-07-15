@@ -3,7 +3,6 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Open Sans', sans-serif;
-
 }
 
 a {
@@ -19,4 +18,8 @@ ul,
 ol,
 li {
   list-style-type: none;
+}
+
+button {
+  font-family: 'Open Sans', sans-serif;
 }

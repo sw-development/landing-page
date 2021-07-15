@@ -2,20 +2,45 @@
   display: flex;
   align-items: stretch;
   justify-content: flex-start;
-  min-height: calc(100vh - 100px);
+  min-height: 100vh;
 
-  > div {
-    min-height: 100%;
+  @include largeTablet {
+    min-height: calc(100vh - 100px);
+
+    > div {
+      min-height: 100%;
+    }
   }
 }
 
 .hero__content-wrapper {
-  padding: 100px;
-  flex: 1 1 50%;
+  position: relative;
+  padding: 25px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+
+  @include largeTablet {
+    padding: 100px;
+    flex: 1 1 50%;
+  }
+}
+
+.hero__content-decoration {
+  position: absolute;
+  top: 30px;
+  left: -35px;
+  width: 70px;
+  height: 70px;
+  z-index: -1;
+
+  @include largeTablet {
+    top: 50px;
+    left: -50px;
+    width: 100px;
+    height: 100px;
+  }
 }
 
 .hero__subtitle-wrapper {
@@ -25,32 +50,44 @@
 }
 
 .hero__subtitle {
-  font-size: 18px;
+  font-size: 16px;
   text-transform: uppercase;
-  color: #9a9b9d;
+  color: $lightGray;
   display: block;
   position: relative;
+
+  @include largeTablet {
+    font-size: $font-xs;
+  }
 }
 
 .hero__title {
   margin: 10px 0;
-  font-size: 74px;
+  font-size: $font-md;
   font-weight: bold;
   font-family: 'Poppins', sans-serif;
   line-height: 1.2;
+
+  @include largeTablet {
+    font-size: $font-xlg;
+  }
 }
 
 .hero__description {
-  font-size: 22px;
+  font-size: 16px;
   line-height: 1.5;
-  color: #8c8e95;
+  color: $gray;
   max-width: 550px;
+
+  @include largeTablet {
+    font-size: $font-xs;
+  }
 }
 
 .hero__image-wrapper {
   display: none;
 
-  @include tablet() {
+  @include largeTablet() {
     display: block;
 
     flex: 1 1 50%;

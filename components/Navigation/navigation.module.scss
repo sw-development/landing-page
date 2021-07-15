@@ -10,11 +10,13 @@
   height: 100vh;
   transition: 0.3s 0.1s ease-in-out;
   border: 1px solid #dbdbdb;
+  background-color: $white;
 
   @include largeTablet() {
     transform: translateX(0);
     height: 100px;
     position: static;
+    background-color: transparent;
   }
 }
 

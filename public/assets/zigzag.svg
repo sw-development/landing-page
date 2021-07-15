@@ -1,9 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="74.244" height="74.244" viewBox="0 0 74.244 74.244">
-  <defs>
-    <linearGradient id="linear-gradient" x1="-0.136" y1="1.713" x2="1.479" y2="-1.368" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#6362d7"/>
-      <stop offset="1" stop-color="#ff8fe2"/>
-    </linearGradient>
-  </defs>
-  <path id="Zigzag_gradient" data-name="Zigzag gradient" d="M61.459,142.178,60.3,131.611l9.422,1.031-1.034-9.42,9.421,1.032-1.034-9.42,9.419,1.035-1.034-9.42,9.42,1.034L93.85,98.064l9.42,1.033-1.034-9.42,10.564,1.16-.2,1.837-8.274-.909,1.034,9.419-9.42-1.033,1.034,9.42-9.42-1.034,1.034,9.42-9.419-1.035,1.034,9.419L70.78,125.31l1.034,9.42L62.39,133.7l.906,8.279Z" transform="translate(57.894 -106.053) rotate(45)" fill="url(#linear-gradient)"/>
+<svg width="74.244" height="15" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <linearGradient gradientUnits="objectBoundingBox" y2="-1.368" x2="1.479" y1="1.713" x1="-0.136" id="linear-gradient">
+   <stop stop-color="#6362d7" offset="0"/>
+   <stop stop-color="#ff8fe2" offset="1"/>
+  </linearGradient>
+ </defs>
+ <g>
+  <title>Layer 1</title>
+  <path transform="rotate(45 57.894 -133.632)" stroke="null" fill="url(#linear-gradient)" d="m119.353,8.54633l-1.159,-10.567l9.422,1.031l-1.034,-9.42l9.421,1.032l-1.034,-9.42l9.419,1.035l-1.034,-9.42l9.42,1.034l-1.03,-9.419l9.42,1.033l-1.034,-9.42l10.564,1.16l-0.2,1.837l-8.274,-0.909l1.034,9.419l-9.42,-1.033l1.034,9.42l-9.42,-1.034l1.034,9.42l-9.419,-1.035l1.034,9.419l-9.423,-1.031l1.034,9.42l-9.424,-1.03l0.906,8.279l-1.837,0.199z" data-name="Zigzag gradient" id="Zigzag_gradient"/>
+ </g>
 </svg>
