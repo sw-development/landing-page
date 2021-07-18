@@ -1,0 +1,85 @@
+.wrapper {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include largeTablet() {
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: flex-start;
+  }
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 50%;
+  padding: 25px;
+  text-align: center;
+  gap: 20px;
+
+  @include largeTablet {
+    align-items: flex-start;
+    text-align: left;
+    padding: 25px 75px 25px 75px;
+  }
+
+  @include smallDesktop {
+    padding-left: 135px;
+    padding-right: 100px;
+  }
+}
+
+.title,
+.description {
+  max-width: 600px;
+  max-width: 600px;
+}
+
+.title {
+  font-size: $font-sm;
+  line-height: 1.2;
+
+  @include largeTablet {
+    font-size: $font-md;
+  }
+
+  @include smallDesktop {
+    font-size: 42px;
+  }
+
+  @include desktop {
+    font-size: $font-lg;
+  }
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.5;
+  color: $gray;
+
+  @include largeTablet {
+    font-size: $font-xs;
+  }
+}
+
+.image-wrapper {
+  max-width: 500px;
+  padding: 0 25px;
+
+  img {
+    aspect-ratio: 4/3;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  @include largeTablet() {
+    padding: 0;
+    max-width: none;
+    flex: 1 1 35%;
+  }
+}
