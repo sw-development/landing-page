@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Navigation from '@/../../components/Navigation/index';
 import Hero from '../components/Hero';
 import Design from '../components/Design';
+import Develop from '../components/Develop';
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       <Navigation />
       <Hero />
       <Design />
+      <Develop />
     </>
   );
 }

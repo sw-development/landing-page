@@ -12,6 +12,7 @@
 }
 
 .content-wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,18 +20,30 @@
   padding: 25px;
   text-align: center;
   gap: 20px;
+  order: 1;
 
   @include largeTablet {
-    position: relative;
     flex: 1 1 55%;
-    align-items: flex-start;
+    order: 0;
+    align-items: flex-end;
     text-align: left;
     padding: 50px 75px;
   }
 
   @include smallDesktop {
-    padding-right: 135px;
-    padding-left: 100px;
+    padding-left: 135px;
+    padding-right: 75px;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  @include largeTablet {
+    align-items: flex-start;
   }
 }
 
@@ -40,18 +53,19 @@
   @include largeTablet {
     display: block;
     position: absolute;
-    top: 5px;
-    right: 10px;
-    width: 50px;
-    height: 50px;
-    z-index: -1;
+    top: 0;
+    left: 5px;
+    object-fit: cover;
+    height: 55px;
+    width: 60px;
   }
 
   @include smallDesktop {
     top: 50%;
+    left: 10px;
     transform: translateY(-50%);
-    height: 80px;
-    width: 80px;
+    height: 85px;
+    width: 90px;
   }
 }
 
@@ -91,6 +105,7 @@
 .image-wrapper {
   max-width: 500px;
   padding: 0 25px;
+  order: 0;
 
   img {
     aspect-ratio: 4/3;
@@ -100,6 +115,7 @@
   }
 
   @include largeTablet() {
+    order: 1;
     padding: 0;
     max-width: none;
     flex: 1 1 45%;

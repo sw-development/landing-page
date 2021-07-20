@@ -7,6 +7,11 @@ const Design = () => (
       <img src="/assets/design.png" alt="" />
     </div>
     <div className={styles['content-wrapper']}>
+      <img
+        src="/assets/hero-dec.svg"
+        alt=""
+        className={styles['content-decoration']}
+      />
       <h2 className={styles.title}>Design solutions to improve products</h2>
       <p className={styles.description}>
         We help our clients make realize their most Important business goals.
