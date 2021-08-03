@@ -1,7 +1,11 @@
 import React from 'react';
 import styles from './design.module.scss';
+import { useTranslation } from '@/../../hooks/useTransation';
 
-const Design = () => (
+const Design = () => {
+  const { dictionary } = useTranslation();
+
+  return(
   <div className={styles.wrapper}>
     <div className={styles['image-wrapper']}>
       <img src="/assets/design.png" alt="" />
@@ -12,17 +16,15 @@ const Design = () => (
         alt=""
         className={styles['content-decoration']}
       />
-      <h2 className={styles.title}>Design solutions to improve products</h2>
+      <h2 className={styles.title}>{dictionary.components.design.title}</h2>
       <p className={styles.description}>
-        We help our clients make realize their most Important business goals.
-        Read what our team has published on the internet.Good newspaper Is a
-        Nation talking to itself.
+        {dictionary.components.design.description}
       </p>
       <button type="button" className={styles.btn}>
-        KNOW MORE
+        {dictionary.common.buttons.knowMore}
       </button>
     </div>
   </div>
-);
+)};
 
 export default Design;

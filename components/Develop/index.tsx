@@ -1,35 +1,38 @@
 import React from 'react';
 import styles from './develop.module.scss';
+import { useTranslation } from '@/../../hooks/useTransation';
 
-const Develop = () => (
-  <div className={styles.wrapper}>
-    <div className={styles['content-wrapper']}>
-      <img
-        src="/assets/develop-dec.png"
-        alt=""
-        className={styles['content-decoration']}
-      />
-      <div className={styles['content']}>
-        <h2 className={styles.title}>
-          Develop powerful apps for your business
-        </h2>
-        <p className={styles.description}>
-          We help our clients make realize their most Important business goals.
-          Read what our team has published on the internet.Good newspaper Is a
-          Nation talking to itself.
-        </p>
-        <button
-          type="button"
-          className={`${styles.btn} ${styles['btn--outline']}`}
-        >
-          KNOW MORE
-        </button>
+const Develop = () => {
+  const { dictionary } = useTranslation();
+
+  return (
+    <div className={styles.wrapper}>
+      <div className={styles['content-wrapper']}>
+        <img
+          src="/assets/develop-dec.png"
+          alt=""
+          className={styles['content-decoration']}
+        />
+        <div className={styles['content']}>
+          <h2 className={styles.title}>
+            {dictionary.components.develop.title}
+          </h2>
+          <p className={styles.description}>
+            {dictionary.components.develop.description}
+          </p>
+          <button
+            type="button"
+            className={`${styles.btn} ${styles['btn--outline']}`}
+          >
+            {dictionary.common.buttons.knowMore}
+          </button>
+        </div>
+      </div>
+      <div className={styles['image-wrapper']}>
+        <img src="/assets/design.png" alt="" />
       </div>
     </div>
-    <div className={styles['image-wrapper']}>
-      <img src="/assets/design.png" alt="" />
-    </div>
-  </div>
-);
+  );
+};
 
 export default Develop;
