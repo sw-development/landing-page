@@ -1,38 +1,75 @@
 // Mixins names to discuss
 
-@mixin mobile(){
-    @media(min-width: 568px){
-        @content
-    }
-};
+@mixin mobile() {
+  @media (min-width: 568px) {
+    @content;
+  }
+}
 
-@mixin tablet(){
-    @media(min-width: 768px){
-        @content
-    }
-};
+@mixin tablet() {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
 
-@mixin largeTablet(){
-    @media(min-width: 992px){
-        @content
-    }
-};
+@mixin largeTablet() {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
 
+@mixin smallDesktop() {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
 
-@mixin smallDesktop(){
-    @media(min-width: 1200px){
-        @content
-    }
-};
+@mixin desktop() {
+  @media (min-width: 1500px) {
+    @content;
+  }
+}
 
-@mixin desktop(){
-    @media(min-width: 1500px){
-        @content
-    }
-};
+@mixin largeDesktop() {
+  @media (min-width: 1920px) {
+    @content;
+  }
+}
 
-@mixin largeDesktop(){
-    @media(min-width: 1920px){
-        @content
+@mixin buttonGradientAnimation() {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 143, 226, 1) 0%,
+    rgba(99, 98, 215, 1) 100%
+  );
+  background-size: 150% 150%;
+  animation: gradient 0.3s ease;
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
     }
-};
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
+
+@mixin cardGradientAnimation() {
+  background: linear-gradient(39deg, #6362d7 -39%, #ff8fe2 187%);
+  background-size: 100% 100%;
+  animation: gradient 0.3s ease;
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}

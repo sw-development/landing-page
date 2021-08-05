@@ -1,8 +1,10 @@
 import Head from 'next/head';
 import Navigation from '@/../../components/Navigation/index';
-import Hero from '../components/Hero';
-import Design from '../components/Design';
-import Develop from '../components/Develop';
+import Hero from '@/../../components/Hero';
+import Design from '@/../../components/Design';
+import Develop from '@/../../components/Develop';
+import React from 'react';
+import Services from '@/../../components/Services';
 
 export default function Home() {
   return (
@@ -13,7 +15,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
           rel="stylesheet"
         />
         <link
@@ -23,6 +25,7 @@ export default function Home() {
       </Head>
       <Navigation />
       <Hero />
+      <Services />
       <Design />
       <Develop />
     </>

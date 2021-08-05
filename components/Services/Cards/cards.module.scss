@@ -1,0 +1,13 @@
+.cards__wrapper {
+  display: grid;
+  flex: 1;
+  grid-gap: 24px;
+  grid-template-columns: 1fr;
+  max-width: 750px;
+  margin-top: 25px;
+
+  @include largeTablet() {
+    grid-template-columns: 1fr 1fr;
+    margin-left: 45px;
+  }
+}

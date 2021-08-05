@@ -27,6 +27,14 @@ export default {
       description:
         'We help our clients make realize their most Important business goals. Read what our team has published on the internet.Good newspaper Is a Nation talking to itself.',
     },
+    services: {
+      main: {
+        subTitle: 'We help with',
+        title: 'Building better solutions',
+        button: 'Our Services',
+      },
+      cards: {},
+    },
   },
   common: {
     buttons: {
