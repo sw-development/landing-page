@@ -5,6 +5,7 @@ import Design from '@/../../components/Design';
 import Develop from '@/../../components/Develop';
 import React from 'react';
 import Services from '@/../../components/Services';
+import Contact from '@/../../components/Contact';
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
       <Services />
       <Design />
       <Develop />
+      <Contact />
     </>
   );
 }

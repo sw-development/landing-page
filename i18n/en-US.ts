@@ -35,10 +35,40 @@ export default {
       },
       cards: {},
     },
+    contact: {
+      title: "Let's start with your dream project",
+      subtitle: 'Get in touch',
+      description: 'We help our clients make realize their most',
+    },
   },
   common: {
     buttons: {
       knowMore: 'KNOW MORE',
+      submit: 'Submit',
     },
+  },
+  forms: {
+    mainContactForm: {
+      fields: {
+        email: {
+          label: 'Email',
+          name: 'email',
+          validationError: "Please provide email in correct format"
+        },
+        fullName: {
+          label: 'Full name',
+          name: 'fullName',
+          validationError: 'Please provide a full name'
+        },
+        message: {
+          label: 'Message',
+          name: 'message',
+          validationError: 'Please provide a message'
+        },
+      },
+    },
+    common: {
+      fieldRequired: "This field is required"
+    }
   },
 };
