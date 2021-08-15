@@ -1,4 +1,4 @@
-import React, { FC, useMemo } from 'react';
+import React, { FC, useRef } from 'react';
 import { useTranslation } from '@/../../hooks/useTransation';
 import styles from './form.module.scss';
 import { FormLabel, Input } from '@material-ui/core';
@@ -6,6 +6,7 @@ import { useForm, Controller } from 'react-hook-form';
 import { ContactFormData } from '@/../../infrastructure/interfaces/Forms/Contact';
 import { CHECK_IF_EMAIL_REGEX } from '@/../../utils/constants';
 import { handleSendEmail } from '@/../../repositories/contact';
+import Recaptcha from 'react-google-invisible-recaptcha';
 
 const defaultValues: ContactFormData = {
   email: '',
@@ -20,11 +21,17 @@ const index: FC = () => {
     formState: { errors },
     control,
     reset,
+    getValues,
   } = useForm<ContactFormData>({ defaultValues });
+  const recaptchaRef = useRef<Recaptcha>(null);
 
-  const onSubmit = async (data: ContactFormData) => {
+  const onSubmit = (): void => {
+    recaptchaRef.current.execute();
+  };
+
+  const onRecaptchaResolved = async (): Promise<void> => {
     try {
-      handleSendEmail(data);
+      handleSendEmail(getValues());
       reset();
     } catch (error) {
       console.log(error); // TODO: Provide some error toast
@@ -134,6 +141,11 @@ const index: FC = () => {
           </span>
         )}
       </FormLabel>
+      <Recaptcha
+        ref={recaptchaRef}
+        sitekey={process.env.siteKey}
+        onResolved={onRecaptchaResolved}
+      />
 
       <label className={styles.contact__form__input__label}>
         <button type="submit" className={styles.contact__form__btn}>
