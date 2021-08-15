@@ -1,10 +1,11 @@
 import React, { FC, useMemo } from 'react';
 import { useTranslation } from '@/../../hooks/useTransation';
 import styles from './form.module.scss';
-import { FormLabel, Input, TextField } from '@material-ui/core';
+import { FormLabel, Input } from '@material-ui/core';
 import { useForm, Controller } from 'react-hook-form';
 import { ContactFormData } from '@/../../infrastructure/interfaces/Forms/Contact';
 import { CHECK_IF_EMAIL_REGEX } from '@/../../utils/constants';
+import { handleSendEmail } from '@/../../repositories/contact';
 
 const defaultValues: ContactFormData = {
   email: '',
@@ -17,11 +18,18 @@ const index: FC = () => {
   const {
     handleSubmit,
     formState: { errors },
-    register,
     control,
+    reset,
   } = useForm<ContactFormData>({ defaultValues });
 
-  const onSubmit = () => console.log('dzida');
+  const onSubmit = async (data: ContactFormData) => {
+    try {
+      handleSendEmail(data);
+      reset();
+    } catch (error) {
+      console.log(error); // TODO: Provide some error toast
+    }
+  };
 
   return (
     <form className={styles.contact__form} onSubmit={handleSubmit(onSubmit)}>
