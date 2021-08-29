@@ -29,7 +29,7 @@ const index = (): JSX.Element => {
       >
         <nav className={styles.navigation}>
           <div onClick={handleNavItemClick}>
-            <Link href="/">
+            <Link href="#home">
               <a>
                 <img src="/assets/logo.png" alt="logo" />
               </a>
@@ -37,7 +37,7 @@ const index = (): JSX.Element => {
           </div>
           <ul className={styles.navigation__list}>
             <li onClick={handleNavItemClick}>
-              <Link href="/">
+              <Link href="#home">
                 <a>{dictionary.components.menu.labels.home}</a>
               </Link>
             </li>
@@ -52,8 +52,8 @@ const index = (): JSX.Element => {
               </Link>
             </li>
             <li onClick={handleNavItemClick}>
-              <Link href="#portfolio">
-                <a>{dictionary.components.menu.labels.ourWork}</a>
+              <Link href="#ourGoal">
+                <a>{dictionary.components.menu.labels.ourGoal}</a>
               </Link>
             </li>
             <li onClick={handleNavItemClick}>

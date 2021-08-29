@@ -5,7 +5,7 @@ import { useTranslation } from '../../hooks/useTranslation';
 const Hero = () => {
   const { dictionary } = useTranslation();
   return (
-    <header className={styles.hero}>
+    <header className={styles.hero} id="home">
       <div className={styles['hero__content-wrapper']}>
         <img
           src="/assets/hero-dec.svg"

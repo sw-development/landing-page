@@ -22,6 +22,10 @@
 
 .navigation__wrapper__active {
   transform: translateX(-100%);
+
+  @include largeTablet() {
+    transform: translateX(0);
+  }
 }
 
 .navigation {

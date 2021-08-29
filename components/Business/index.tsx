@@ -6,7 +6,7 @@ const index: FC = () => {
   const { dictionary } = useTranslation();
 
   return (
-    <div className={styles.business__wrapper}>
+    <div className={styles.business__wrapper} id="ourGoal">
       <div className={styles.business__heading__wrapper}>
         <div className={styles.business__main__card__subtitle}>
           <span>{dictionary.components.business.mainCard.subtitle}</span>

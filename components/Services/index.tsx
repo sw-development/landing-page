@@ -6,7 +6,7 @@ import Cards from '@/../../components/Services/Cards';
 const index = (): JSX.Element => {
   const { dictionary } = useTranslation();
   return (
-    <div className={styles.services}>
+    <div className={styles.services} id="services">
       <div className={styles.services__wrapper}>
         <div className={styles['services__titles--wrapper']}>
           <div className={styles['services__subtitle--wrapper']}>

@@ -5,7 +5,7 @@ export default {
         home: 'Home',
         aboutUs: 'About Us',
         services: 'Services',
-        ourWork: 'Our Work',
+        ourGoal: 'Our Goal',
         contactUs: 'Contact us',
       },
     },

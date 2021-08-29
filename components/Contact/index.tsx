@@ -7,7 +7,7 @@ const index: FC = () => {
   const { dictionary } = useTranslation();
 
   return (
-    <div className={styles.contact__wrapper}>
+    <div className={styles.contact__wrapper} id="contact">
       <img
         className={styles.contact__content__decoration__x}
         src="/assets/contactX.svg"
