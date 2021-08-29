@@ -1,5 +1,5 @@
 import React, { FC, useRef } from 'react';
-import { useTranslation } from '@/../../hooks/useTransation';
+import { useTranslation } from '../../../hooks/useTranslation';
 import styles from './form.module.scss';
 import { FormLabel, Input } from '@material-ui/core';
 import { useForm, Controller } from 'react-hook-form';

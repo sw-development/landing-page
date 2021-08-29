@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from 'react';
 import styles from './navigation.module.scss';
 import Link from 'next/link';
-import { useTranslation } from '@/../../hooks/useTransation';
+import { useTranslation } from '../../hooks/useTranslation';
 
 const index = (): JSX.Element => {
   const [isActive, setIsActive] = useState(false);

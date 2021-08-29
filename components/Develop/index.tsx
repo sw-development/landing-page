@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './develop.module.scss';
-import { useTranslation } from '@/../../hooks/useTransation';
+import { useTranslation } from '../../hooks/useTranslation';
 
 const Develop = () => {
   const { dictionary } = useTranslation();

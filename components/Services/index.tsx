@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTranslation } from '@/../../hooks/useTransation';
+import { useTranslation } from '../../hooks/useTranslation';
 import styles from './services.module.scss';
 import Cards from '@/../../components/Services/Cards';
 

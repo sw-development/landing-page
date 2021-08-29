@@ -6,6 +6,7 @@ import Develop from '@/../../components/Develop';
 import React from 'react';
 import Services from '@/../../components/Services';
 import Contact from '@/../../components/Contact';
+import Business from '@/../../components/Business';
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
       <Hero />
       <Services />
       <Design />
+      <Business />
       <Develop />
       <Contact />
     </>

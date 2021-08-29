@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import styles from './contact.module.scss';
-import { useTranslation } from '@/../../hooks/useTransation';
+import { useTranslation } from '../../hooks/useTranslation';
 import Form from '@/../../components/Contact/Form';
 
 const index: FC = () => {

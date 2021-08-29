@@ -1,0 +1,96 @@
+.business__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: $secondary-blue;
+  padding: 50px 14px;
+  color: $white;
+  position: relative;
+
+  @include largeTablet() {
+    padding: 100px;
+    flex-direction: row;
+  }
+
+  @include desktop() {
+    padding: 140px;
+  }
+}
+
+.business__heading__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+
+  @include largeTablet() {
+    margin-right: 140px;
+    margin-bottom: 0;
+  }
+}
+
+.business__main__card__subtitle {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  text-transform: uppercase;
+  font-weight: $weightLight;
+  letter-spacing: 1.92px;
+  font-size: $font-xs;
+
+  @include largeTablet() {
+    font-size: 20px;
+  }
+}
+
+.business__main__card__title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  line-height: 1.3;
+  max-width: 372px;
+  margin-top: 10px;
+
+  @include largeTablet() {
+    font-size: $font-lg;
+  }
+}
+
+.business__subcards__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+
+  @include tablet() {
+    flex-direction: row;
+    gap: 55px;
+  }
+}
+
+.business__subcards__item {
+  max-width: 300px;
+  overflow: hidden;
+
+  h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+
+  span {
+    font-size: $font-xs;
+    line-height: 1.5;
+  }
+
+  @include largeTablet() {
+    h3 {
+      font-size: $font-md;
+      margin-bottom: 32px;
+    }
+
+    span {
+      font-size: $font-sm;
+    }
+  }
+}

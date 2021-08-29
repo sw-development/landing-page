@@ -40,6 +40,22 @@ export default {
       subtitle: 'Get in touch',
       description: 'We help our clients make realize their most',
     },
+    business: {
+      mainCard: {
+        title: 'Helping your business grow',
+        subtitle: 'Digital agency',
+      },
+      goalCard: {
+        title: 'Our Goal',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris consequat volutpat arcu, sed imperdiet leo.',
+      },
+      visionCard: {
+        title: 'Our Vision',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris consequat volutpat arcu, sed imperdiet leo.',
+      },
+    },
   },
   common: {
     buttons: {
@@ -53,22 +69,22 @@ export default {
         email: {
           label: 'Email',
           name: 'email',
-          validationError: "Please provide email in correct format"
+          validationError: 'Please provide email in correct format',
         },
         fullName: {
           label: 'Full name',
           name: 'fullName',
-          validationError: 'Please provide a full name'
+          validationError: 'Please provide a full name',
         },
         message: {
           label: 'Message',
           name: 'message',
-          validationError: 'Please provide a message'
+          validationError: 'Please provide a message',
         },
       },
     },
     common: {
-      fieldRequired: "This field is required"
-    }
+      fieldRequired: 'This field is required',
+    },
   },
 };
