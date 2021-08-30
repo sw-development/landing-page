@@ -6,27 +6,27 @@ export const CARDS: Card[] = [
     title: 'Lorem',
     description:
       'Lorem ipsum dolor amet, an ipsum dore dusino sinto. Ipsum dolor amet lorem.',
-    path: '/',
+    path: '#contact',
   },
   {
     id: 'lorem-2-card',
     title: 'Lorem',
     description:
       'Lorem ipsum dolor amet, an ipsum dore dusino sinto. Ipsum dolor amet lorem.',
-    path: '/',
+    path: '#contact',
   },
   {
     id: 'lorem-3-card',
     title: 'Lorem',
     description:
       'Lorem ipsum dolor amet, an ipsum dore dusino sinto. Ipsum dolor amet lorem.',
-    path: '/',
+    path: '#contact',
   },
   {
     id: 'lorem-4-card',
     title: 'Lorem',
     description:
       'Lorem ipsum dolor amet, an ipsum dore dusino sinto. Ipsum dolor amet lorem.',
-    path: '/',
+    path: '#contact',
   },
 ];

@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslation } from '../../hooks/useTranslation';
 import styles from './services.module.scss';
 import Cards from '@/../../components/Services/Cards';
+import Link from 'next/link';
 
 const index = (): JSX.Element => {
   const { dictionary } = useTranslation();
@@ -18,10 +19,16 @@ const index = (): JSX.Element => {
           <h2 className={styles.services__title}>
             {dictionary.components.services.main.title}
           </h2>
-          <button className={`${styles.btn} ${styles['btn--outline']}`}>
-            {dictionary.components.services.main.button}
-            <img className={styles['btn--arrow']} src="/assets/arrowWhite.svg" alt="" />
-          </button>
+          <Link href="#contact">
+            <a className={`${styles.link} ${styles['link--outline']}`}>
+              {dictionary.components.services.main.button}
+              <img
+                className={styles['link--arrow']}
+                src="/assets/arrowWhite.svg"
+                alt=""
+              />
+            </a>
+          </Link>
         </div>
         <Cards />
       </div>
