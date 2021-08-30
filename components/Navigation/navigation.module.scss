@@ -1,3 +1,5 @@
+$nav-links: home, about us, services, our goal, contact us;
+
 .navigation__wrapper {
   display: flex;
   position: fixed;
@@ -90,6 +92,7 @@
     margin: 15px 0;
     padding: 15px 0px;
     cursor: pointer;
+    transform: translateX(100%);
     transition: 0.2s all linear;
 
     &:hover,
@@ -100,14 +103,13 @@
     }
 
     &:last-of-type {
-      width: auto;
+      a {
+        width: auto;
+        border-radius: 27px;
+        border: 2px solid $secondary-purple;
+        padding: 7px 15px;
+      }
     }
-  }
-
-  & > li:last-of-type {
-    border-radius: 27px;
-    border: 2px solid $secondary-purple;
-    padding: 7px 15px;
   }
 
   @include mobile() {
@@ -124,10 +126,22 @@
     justify-content: flex-end;
 
     li {
+      transform: translateX(0%);
       padding: 0px;
       margin: 0px 20px;
       width: fit-content;
       text-align: center;
+    }
+  }
+}
+
+.active__mobile__menu {
+  @for $i from 1 through length($nav-links) {
+    li {
+      &:nth-child(#{$i}) {
+        transform: translateX(0%);
+        transition-delay: ($i - 1)/10 + s;
+      }
     }
   }
 }

@@ -35,7 +35,7 @@ const index = (): JSX.Element => {
               </a>
             </Link>
           </div>
-          <ul className={styles.navigation__list}>
+          <ul className={`${styles.navigation__list} ${isActive && styles.active__mobile__menu}`}>
             <li onClick={handleNavItemClick}>
               <Link href="#home">
                 <a>{dictionary.components.menu.labels.home}</a>
