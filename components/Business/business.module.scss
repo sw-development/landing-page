@@ -4,7 +4,7 @@
   align-items: center;
   flex-direction: column;
   background-color: $secondary-blue;
-  padding: 50px 14px;
+  padding: 35px 25px;
   color: $white;
   position: relative;
 
@@ -81,6 +81,7 @@
   span {
     font-size: $font-xs;
     line-height: 1.5;
+    font-weight: $weightLight;
   }
 
   @include largeTablet() {

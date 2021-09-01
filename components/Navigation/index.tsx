@@ -42,7 +42,7 @@ const index = (): JSX.Element => {
               </Link>
             </li>
             <li onClick={handleNavItemClick}>
-              <Link href="/about">
+              <Link href="#about">
                 <a>{dictionary.components.menu.labels.aboutUs}</a>
               </Link>
             </li>
