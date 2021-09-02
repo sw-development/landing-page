@@ -7,6 +7,7 @@ import React from 'react';
 import Services from '@/../../components/Services';
 import Contact from '@/../../components/Contact';
 import Business from '@/../../components/Business';
+import Footer from '../components/Footer';
 
 export default function Home() {
   return (
@@ -32,6 +33,7 @@ export default function Home() {
       <Business />
       <Develop />
       <Contact />
+      <Footer />
     </>
   );
 }
