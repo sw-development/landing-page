@@ -260,4 +260,8 @@ $nav-links: home, about us, services, our goal, contact us;
 
 .body__overflow__hidden {
   overflow: hidden;
+
+  @include largeTablet() {
+    overflow-y: scroll;
+  }
 }
