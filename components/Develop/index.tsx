@@ -29,7 +29,7 @@ const Develop = () => {
         </div>
       </div>
       <div className={styles['image-wrapper']}>
-        <img src="/assets/design.png" alt="" />
+        <img src="/assets/develop.jpg" alt="" />
       </div>
     </div>
   );
