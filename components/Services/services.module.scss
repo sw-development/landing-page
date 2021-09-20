@@ -4,6 +4,7 @@
   justify-content: flex-end;
   background-color: $secondary-blue;
   padding: 15px 25px;
+  padding-bottom: 45px;
   color: $white;
 
   @include largeTablet() {

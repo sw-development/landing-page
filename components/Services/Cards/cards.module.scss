@@ -4,7 +4,7 @@
   grid-gap: 24px;
   grid-template-columns: 1fr;
   max-width: 750px;
-  margin-top: 25px;
+  margin-top: 45px;
 
   @include largeTablet() {
     grid-template-columns: 1fr 1fr;
