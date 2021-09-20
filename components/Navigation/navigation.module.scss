@@ -257,3 +257,7 @@ $nav-links: home, about us, services, our goal, contact us;
     transform: translateY(10px) rotate(45deg);
   }
 }
+
+.body__overflow__hidden {
+  overflow: hidden;
+}

@@ -16,11 +16,11 @@ const index = (): JSX.Element => {
   const handleTopBarSticky = () => {
     const hamburgerRef = hamburgerWrapperRef.current;
     const navigationDesktopRef = navigationWrapperRef.current;
-    const pageYOffset= window.pageYOffset;
+    const pageYOffset = window.pageYOffset;
 
     if (pageYOffset * 2 > hamburgerRef.offsetHeight || pageYOffset * 2 > navigationDesktopRef.offsetHeight) {
-      hamburgerRef.classList.add(styles.hamburger__wrapper__sticky);
       navigationDesktopRef.classList.add(styles.navigation__wrapper__sticky);
+      hamburgerRef.classList.add(styles.hamburger__wrapper__sticky);
     } else {
       hamburgerRef.classList.remove(styles.hamburger__wrapper__sticky);
       navigationDesktopRef.classList.remove(styles.navigation__wrapper__sticky);
@@ -32,6 +32,17 @@ const index = (): JSX.Element => {
 
     return () => window.removeEventListener('scroll', handleTopBarSticky);
   }, []);
+
+  useEffect(() => {
+    const bodyRef = document.querySelector('body');
+
+    if (isActive) {
+      bodyRef.classList.add(styles.body__overflow__hidden);
+    } else {
+      bodyRef.classList.remove(styles.body__overflow__hidden)
+    }
+
+  }, [isActive])
 
   return (
     <>
