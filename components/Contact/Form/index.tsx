@@ -1,7 +1,7 @@
 import React, { FC, useRef } from 'react';
 import { useTranslation } from '../../../hooks/useTranslation';
 import styles from './form.module.scss';
-import { FormLabel, Input } from '@material-ui/core';
+import { FormLabel, Input, TextField } from '@material-ui/core';
 import { useForm, Controller } from 'react-hook-form';
 import { ContactFormData } from '@/../../infrastructure/interfaces/Forms/Contact';
 import { CHECK_IF_EMAIL_REGEX } from '@/../../utils/constants';
@@ -119,22 +119,23 @@ const index: FC = () => {
           root: `${styles.contact__form__label__custom} ${styles.contact__form__label__custom__message}`,
         }}
       >
-        <div className={styles.contact__form__textarea__wrapper}>
-          <Controller
-            name="message"
-            control={control}
-            render={({ field }) => (
-              <textarea
-                className={styles.contact__form__textarea}
-                placeholder={
-                  dictionary.forms.mainContactForm.fields.message.label
-                }
-                {...field}
-              />
-            )}
-            rules={{ required: true }}
-          />
-        </div>
+        <Controller
+          name="message"
+          control={control}
+          render={({ field }) => (
+            <Input
+              className={styles.contact__form__textarea}
+              classes={{ root: styles.contact__form__customInputRoot }}
+              placeholder={
+                dictionary.forms.mainContactForm.fields.message.label
+              }
+              {...field}
+              multiline
+              rows={5}
+            />
+          )}
+          rules={{ required: true }}
+        />
         {errors.message && errors.message.type === 'required' && (
           <span className={styles.contact__form__validationError}>
             {dictionary.forms.common.fieldRequired}

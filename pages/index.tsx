@@ -30,8 +30,8 @@ export default function Home() {
       <Hero />
       <Services />
       <Design />
-      <Business />
       <Develop />
+      <Business />
       <Contact />
       <Footer />
     </>
