@@ -79,9 +79,7 @@
   }
 
   span {
-    font-size: $font-xs;
     line-height: 1.5;
-    font-weight: $weightLight;
   }
 
   @include largeTablet() {
@@ -91,7 +89,7 @@
     }
 
     span {
-      font-size: 20px;
+      font-size: $font-xs;
     }
   }
 }
