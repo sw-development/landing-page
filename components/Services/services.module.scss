@@ -4,7 +4,7 @@
   justify-content: flex-end;
   background-color: $secondary-blue;
   padding: 15px 25px;
-  padding-bottom: 45px;
+  padding-bottom: 40px;
   color: $white;
 
   @include largeTablet() {
@@ -12,7 +12,7 @@
   }
 
   @include desktop() {
-    padding:  140px;
+    padding: 140px;
   }
 }
 

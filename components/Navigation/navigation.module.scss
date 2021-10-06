@@ -166,7 +166,7 @@ $nav-links: home, about us, services, our goal, contact us;
   display: flex;
   justify-content: flex-end;
   background-color: $white;
-  padding: 10px 7px;
+  padding: 15px;
   transition: 0.3s linear;
 
   @include largeTablet() {
@@ -175,7 +175,6 @@ $nav-links: home, about us, services, our goal, contact us;
 }
 
 .hamburger__wrapper__sticky {
-  padding: 5px 7px;
   background-color: rgba(255, 255, 255, 0.9);
 }
 
