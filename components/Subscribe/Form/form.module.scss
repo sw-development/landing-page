@@ -42,17 +42,18 @@
 }
 
 .subscribe__form__label__custom {
-  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 80%;
 
   @include largeTablet() {
     margin-top: 40px !important;
+    width: 100%;
   }
 
   div {
-      width: 100%;
+    width: 100%;
   }
 }
