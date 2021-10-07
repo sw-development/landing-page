@@ -8,6 +8,7 @@ import Services from '@/../../components/Services';
 import Contact from '@/../../components/Contact';
 import Business from '@/../../components/Business';
 import Footer from '../components/Footer';
+import Subscribe from '../components/Subscribe';
 
 export default function Home() {
   return (
@@ -32,6 +33,7 @@ export default function Home() {
       <Design />
       <Develop />
       <Business />
+      <Subscribe />
       <Contact />
       <Footer />
     </>

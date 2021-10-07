@@ -35,6 +35,10 @@ export default {
       },
       cards: {},
     },
+    subscribe: {
+      title: 'Subscribe Company newsletter',
+      description: 'Newsletter'
+    },
     contact: {
       title: "Let's start with your dream project",
       subtitle: 'Get in touch',
@@ -82,6 +86,20 @@ export default {
           validationError: 'Please provide a message',
         },
       },
+      subscribeForm: {
+        fields: {
+          name: {
+            label: "Your name",
+            name: 'name',
+            validationError: 'Please provide your name'
+          },
+          email: {
+            label: 'Email',
+            name: 'email',
+            validationError: 'Please provide email in correct format',
+          },
+        }
+      }
     },
     common: {
       fieldRequired: 'This field is required',

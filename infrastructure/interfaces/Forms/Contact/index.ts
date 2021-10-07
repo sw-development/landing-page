@@ -3,3 +3,8 @@ export interface ContactFormData {
   fullName: string;
   message: string;
 }
+
+export interface SubscribeFormData {
+  email: string;
+  name: string;
+}

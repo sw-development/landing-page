@@ -1,0 +1,58 @@
+.subscribe__form {
+  display: flex;
+  max-width: 850px;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 40px;
+
+  @include largeTablet() {
+    gap: 40px;
+    flex-direction: row;
+  }
+}
+
+.subscribe__form__btn {
+  background: transparent;
+  border-radius: 30px;
+  border: solid 2px $secondary-purple;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 10px 30px;
+  cursor: pointer;
+
+  font-size: 15px;
+
+  @include largeTablet() {
+    padding: 17px 48px;
+  }
+
+  &:hover {
+    @include buttonGradientAnimation();
+  }
+}
+
+.subscribe__form__validationError {
+  font-size: 14px;
+  color: $brightRed;
+  padding: 4px 0px;
+  height: 20px;
+}
+
+.subscribe__form__label__custom {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include largeTablet() {
+    margin-top: 40px !important;
+  }
+
+  div {
+      width: 100%;
+  }
+}
