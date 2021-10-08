@@ -5,8 +5,10 @@ import { useTranslation } from '../../hooks/useTranslation';
 
 const index = (): JSX.Element => {
   const [isActive, setIsActive] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const hamburgerWrapperRef = useRef<HTMLDivElement>(null);
   const navigationWrapperRef = useRef<HTMLDivElement>(null);
+
   const handleNavItemClick = useCallback((): void => {
     setIsActive(!isActive);
   }, [isActive]);
@@ -14,16 +16,11 @@ const index = (): JSX.Element => {
   const { dictionary } = useTranslation();
 
   const handleTopBarSticky = () => {
-    const hamburgerRef = hamburgerWrapperRef.current;
-    const navigationDesktopRef = navigationWrapperRef.current;
-    const pageYOffset = window.pageYOffset;
-
-    if (pageYOffset * 2 > hamburgerRef.offsetHeight || pageYOffset * 2 > navigationDesktopRef.offsetHeight) {
-      navigationDesktopRef.classList.add(styles.navigation__wrapper__sticky);
-      hamburgerRef.classList.add(styles.hamburger__wrapper__sticky);
+    const pageOffset = window.scrollY;
+    if (pageOffset > 200) {
+      setScrolled(true);
     } else {
-      hamburgerRef.classList.remove(styles.hamburger__wrapper__sticky);
-      navigationDesktopRef.classList.remove(styles.navigation__wrapper__sticky);
+      setScrolled(false);
     }
   };
 
@@ -39,14 +36,18 @@ const index = (): JSX.Element => {
     if (isActive) {
       bodyRef.classList.add(styles.body__overflow__hidden);
     } else {
-      bodyRef.classList.remove(styles.body__overflow__hidden)
+      bodyRef.classList.remove(styles.body__overflow__hidden);
     }
-
-  }, [isActive])
+  }, [isActive]);
 
   return (
     <>
-      <div className={`${styles.hamburger__wrapper} ${isActive && styles.hamburger__wrapper__transparent}`} ref={hamburgerWrapperRef}>
+      <div
+        className={`${styles.hamburger__wrapper} ${
+          isActive && styles.hamburger__wrapper__transparent
+        } ${scrolled && styles.hamburger__wrapper__sticky}`}
+        ref={hamburgerWrapperRef}
+      >
         <button className={styles.hamburger} onClick={handleNavItemClick}>
           <span className={styles.hamburger__box}>
             <span
@@ -61,7 +62,7 @@ const index = (): JSX.Element => {
         ref={navigationWrapperRef}
         className={`${styles.navigation__wrapper} ${
           isActive && styles.navigation__wrapper__active
-        }`}
+        } ${scrolled && styles.navigation__wrapper__sticky}`}
       >
         <nav className={styles.navigation}>
           <div onClick={handleNavItemClick}>
