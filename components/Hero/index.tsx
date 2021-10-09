@@ -37,6 +37,11 @@ const Hero = () => {
           alt=""
           className={styles.hero__content__decor__pinkDot}
         />
+        <img 
+          src="/assets/heroDecorCircle.svg"
+          alt=""
+          className ={styles.hero__content__decor__circle}
+        />
         <div className={styles['hero__subtitle-wrapper']}>
           <span className={styles.hero__subtitle}>
             {dictionary.components.hero.subTitle}

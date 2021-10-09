@@ -190,3 +190,14 @@
     top: initial;
   }
 }
+
+.hero__content__decor__circle {
+  display: none;
+
+  @include largeTablet() {
+    display: block;
+    position: absolute;
+    right: 20%;
+    top: 10%;
+  }
+}
