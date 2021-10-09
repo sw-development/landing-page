@@ -157,3 +157,36 @@
     z-index: 1;
   }
 }
+
+.hero__content__decor__rectangle {
+  display: none;
+
+  @include largeTablet() {
+    display: block;
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+  }
+}
+
+.hero__content__decor__square {
+  display: none;
+  @include largeTablet() {
+    display: block;
+    position: absolute;
+    left: 0%;
+    bottom: 10%;
+  }
+}
+
+.hero__content__decor__pinkDot {
+  position: absolute;
+  right: 10%;
+  top: 25%;
+
+  @include largeTablet() {
+    left: 5%;
+    bottom: 30%;
+    top: initial;
+  }
+}
