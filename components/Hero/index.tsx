@@ -12,6 +12,11 @@ const Hero = () => {
           alt=""
           className={styles['hero__content-decoration']}
         />
+        <img 
+          src="/assets/heroMobileDecorDots.svg"
+          alt=""
+          className={styles.hero__content__decor__dots}
+        />
         <div className={styles['hero__subtitle-wrapper']}>
           <span className={styles.hero__subtitle}>
             {dictionary.components.hero.subTitle}

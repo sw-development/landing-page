@@ -3,6 +3,7 @@
   align-items: stretch;
   justify-content: flex-start;
   min-height: 100vh;
+  overflow: hidden;
 
   @include largeTablet {
     min-height: calc(100vh - 100px);
@@ -117,5 +118,15 @@
       object-fit: cover;
       aspect-ratio: 4/3;
     }
+  }
+}
+
+.hero__content__decor__dots {
+  position: absolute;
+  right: -25%;
+  bottom: 0%;
+
+  @include largeTablet() {
+    display: none;
   }
 }
