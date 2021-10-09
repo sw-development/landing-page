@@ -6,6 +6,11 @@ const Hero = () => {
   const { dictionary } = useTranslation();
   return (
     <header className={styles.hero} id="home">
+       <img 
+          src="/assets/heroDesktopDecor.svg"
+          alt=""
+          className={styles.hero__content__decor__globe__dots}
+        />
       <div className={styles['hero__content-wrapper']}>
         <img
           src="/assets/hero-dec.svg"

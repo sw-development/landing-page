@@ -4,6 +4,7 @@
   justify-content: flex-start;
   min-height: 100vh;
   overflow: hidden;
+  position: relative;
 
   @include largeTablet {
     min-height: calc(100vh - 100px);
@@ -128,5 +129,17 @@
 
   @include largeTablet() {
     display: none;
+  }
+}
+
+.hero__content__decor__globe__dots {
+  display: none;
+
+  @include largeTablet() {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 }
