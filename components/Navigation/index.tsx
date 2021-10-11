@@ -11,7 +11,7 @@ const index = (): JSX.Element => {
   const { dictionary } = useTranslation();
 
   const handleNavItemClick = useCallback((): void => {
-    if (document.body.clientWidth < 992) {
+    if (window.screen.availWidth < 992) {
       setIsActive(!isActive);
     }
   }, [isActive]);
@@ -26,7 +26,7 @@ const index = (): JSX.Element => {
   };
 
   const handleResize = () => {
-    if (document.body.clientWidth >= 992) {
+    if (window.screen.availWidth >= 992) {
       !isActive && setIsActive(false);
     }
   };
@@ -44,7 +44,7 @@ const index = (): JSX.Element => {
   useEffect(() => {
     const bodyRef = document.querySelector('body');
 
-    if (document.body.clientWidth < 992) {
+    if (window.screen.availWidth < 992) {
       if (isActive) {
         bodyRef.classList.add(styles.body__overflow__hidden);
       } else {
