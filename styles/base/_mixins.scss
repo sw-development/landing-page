@@ -43,6 +43,7 @@
     rgba(99, 98, 215, 1) 100%
   );
   background-size: 150% 150%;
+  color: $white;
   animation: gradient 0.3s ease;
   @keyframes gradient {
     0% {

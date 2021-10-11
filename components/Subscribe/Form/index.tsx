@@ -112,12 +112,12 @@ const index: FC = () => {
         sitekey={process.env.siteKey}
         onResolved={onRecaptchaResolved}
       />
-
-      <label className={styles.subscribe__form__input__label}>
-        <button type="submit" className={styles.subscribe__form__btn}>
-          {dictionary.common.buttons.submit}
-        </button>
-      </label>
+      <button
+        type="submit"
+        className={`${styles.btn} ${styles['btn--outline']}`}
+      >
+        {dictionary.common.buttons.submit}
+      </button>
     </form>
   );
 };

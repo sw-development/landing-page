@@ -37,10 +37,10 @@ const Hero = () => {
           alt=""
           className={styles.hero__content__decor__pinkDot}
         />
-        <img 
+        <img
           src="/assets/heroDecorCircle.svg"
           alt=""
-          className ={styles.hero__content__decor__circle}
+          className={styles.hero__content__decor__circle}
         />
         <div className={styles['hero__subtitle-wrapper']}>
           <span className={styles.hero__subtitle}>
@@ -59,7 +59,11 @@ const Hero = () => {
         </button>
       </div>
       <div className={styles['hero__image-wrapper']}>
-        <img src="/assets/hero.png" alt="" className={styles.hero__image__content}/>
+        <img
+          src="/assets/hero.png"
+          alt=""
+          className={styles.hero__image__content}
+        />
         <img
           src="/assets/heroImageDecor.svg"
           alt=""

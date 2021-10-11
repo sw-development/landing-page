@@ -118,9 +118,8 @@ $nav-links: home, about us, services, our goal, contact us;
     &:last-of-type {
       a {
         width: auto;
-        border-radius: 27px;
-        border: 2px solid $secondary-purple;
-        padding: 7px 15px;
+        padding: 10px 15px;
+        font-weight: 400;
       }
     }
   }

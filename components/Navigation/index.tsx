@@ -99,7 +99,9 @@ const index = (): JSX.Element => {
             </li>
             <li onClick={handleNavItemClick}>
               <Link href="#contact">
-                <a>{dictionary.components.menu.labels.contactUs}</a>
+                <a className={`${styles.btn} ${styles['btn--outline']}`}>
+                  {dictionary.components.menu.labels.contactUs}
+                </a>
               </Link>
             </li>
           </ul>

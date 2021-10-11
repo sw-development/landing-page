@@ -74,29 +74,10 @@
 }
 
 .contact__form__btn {
-  color: $white;
-  background: transparent;
-  border-radius: 30px;
-  border: solid 2px $secondary-purple;
-  text-transform: uppercase;
-  font-weight: 600;
-  padding: 10px 30px;
-  cursor: pointer;
   margin-top: 20px;
-  padding-left: 2px;
-
-  textarea {
-    padding-left: 2px;
-  }
-
-  font-size: 15px;
+  color: $white;
 
   @include largeTablet() {
-    padding: 17px 48px;
     margin-top: 50px;
-  }
-
-  &:hover {
-    @include buttonGradientAnimation();
   }
 }

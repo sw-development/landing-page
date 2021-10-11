@@ -148,11 +148,14 @@ const index: FC = () => {
         onResolved={onRecaptchaResolved}
       />
 
-      <label className={styles.contact__form__input__label}>
-        <button type="submit" className={styles.contact__form__btn}>
+      <div>
+        <button
+          type="submit"
+          className={`${styles.btn} ${styles['btn--outline']} ${styles.contact__form__btn}`}
+        >
           {dictionary.common.buttons.submit}
         </button>
-      </label>
+      </div>
     </form>
   );
 };
