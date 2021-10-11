@@ -24,6 +24,10 @@ $nav-links: home, about us, services, our goal, contact us;
   img {
     transition: 0.3s linear;
   }
+
+  a {
+    text-transform: capitalize;
+  }
 }
 
 .navigation__wrapper__sticky {
