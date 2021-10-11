@@ -8,16 +8,17 @@ const index = (): JSX.Element => {
   const [scrolled, setScrolled] = useState(false);
   const hamburgerWrapperRef = useRef<HTMLDivElement>(null);
   const navigationWrapperRef = useRef<HTMLDivElement>(null);
+  const { dictionary } = useTranslation();
 
   const handleNavItemClick = useCallback((): void => {
-    setIsActive(!isActive);
+    if (document.body.clientWidth < 992) {
+      setIsActive(!isActive);
+    }
   }, [isActive]);
-
-  const { dictionary } = useTranslation();
 
   const handleTopBarSticky = () => {
     const pageOffset = window.scrollY;
-    if (pageOffset > 50) {
+    if (pageOffset > 200) {
       setScrolled(true);
     } else {
       setScrolled(false);
@@ -25,8 +26,8 @@ const index = (): JSX.Element => {
   };
 
   const handleResize = () => {
-    if (window.innerWidth >= 992) {
-      setIsActive(false);
+    if (document.body.clientWidth >= 992) {
+      !isActive && setIsActive(false);
     }
   };
 
@@ -43,10 +44,12 @@ const index = (): JSX.Element => {
   useEffect(() => {
     const bodyRef = document.querySelector('body');
 
-    if (isActive) {
-      bodyRef.classList.add(styles.body__overflow__hidden);
-    } else {
-      bodyRef.classList.remove(styles.body__overflow__hidden);
+    if (document.body.clientWidth < 992) {
+      if (isActive) {
+        bodyRef.classList.add(styles.body__overflow__hidden);
+      } else {
+        bodyRef.classList.remove(styles.body__overflow__hidden);
+      }
     }
   }, [isActive]);
 

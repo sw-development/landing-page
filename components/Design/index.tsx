@@ -6,7 +6,7 @@ const Design = () => {
   const { dictionary } = useTranslation();
 
   return(
-  <div className={styles.wrapper}>
+  <div className={styles.wrapper} id="about">
     <div className={styles['image-wrapper']}>
       <img src="/assets/design.png" alt="" />
     </div>
