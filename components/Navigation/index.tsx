@@ -17,17 +17,27 @@ const index = (): JSX.Element => {
 
   const handleTopBarSticky = () => {
     const pageOffset = window.scrollY;
-    if (pageOffset > 200) {
+    if (pageOffset > 50) {
       setScrolled(true);
     } else {
       setScrolled(false);
     }
   };
 
+  const handleResize = () => {
+    if (window.innerWidth >= 992) {
+      setIsActive(false);
+    }
+  };
+
   useEffect(() => {
     window.addEventListener('scroll', handleTopBarSticky);
+    window.addEventListener('resize', handleResize);
 
-    return () => window.removeEventListener('scroll', handleTopBarSticky);
+    return () => (
+      window.removeEventListener('scroll', handleTopBarSticky),
+      window.removeEventListener('resize', handleResize)
+    );
   }, []);
 
   useEffect(() => {
@@ -45,7 +55,7 @@ const index = (): JSX.Element => {
       <div
         className={`${styles.hamburger__wrapper} ${
           isActive && styles.hamburger__wrapper__transparent
-        } ${scrolled && styles.hamburger__wrapper__sticky}`}
+        } ${scrolled && !isActive && styles.hamburger__wrapper__sticky}`}
         ref={hamburgerWrapperRef}
       >
         <button className={styles.hamburger} onClick={handleNavItemClick}>
@@ -62,7 +72,7 @@ const index = (): JSX.Element => {
         ref={navigationWrapperRef}
         className={`${styles.navigation__wrapper} ${
           isActive && styles.navigation__wrapper__active
-        } ${scrolled && styles.navigation__wrapper__sticky}`}
+        } ${scrolled && !isActive && styles.navigation__wrapper__sticky}`}
       >
         <nav className={styles.navigation}>
           <div onClick={handleNavItemClick}>
