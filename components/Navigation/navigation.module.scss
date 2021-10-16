@@ -1,4 +1,4 @@
-$nav-links: home, about us, services, our goal, contact us;
+$nav-links: home, about us, services, our goal, contact us, locales;
 
 .navigation__wrapper {
   display: flex;
@@ -147,6 +147,10 @@ $nav-links: home, about us, services, our goal, contact us;
       margin: 0px 20px;
       width: fit-content;
       text-align: center;
+
+      &:last-of-type {
+        margin: 0px;
+      }
     }
   }
 }

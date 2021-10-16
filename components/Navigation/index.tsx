@@ -2,6 +2,7 @@ import React, { useCallback, useState, useRef, useEffect } from 'react';
 import styles from './navigation.module.scss';
 import Link from 'next/link';
 import { useTranslation } from '../../hooks/useTranslation';
+import LanguagePicker from '@/../../components/LanguagePicker/index';
 
 const index = (): JSX.Element => {
   const [isActive, setIsActive] = useState(false);
@@ -116,6 +117,9 @@ const index = (): JSX.Element => {
                   {dictionary.components.menu.labels.contactUs}
                 </a>
               </Link>
+            </li>
+            <li>
+              <LanguagePicker />
             </li>
           </ul>
         </nav>
