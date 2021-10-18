@@ -5,7 +5,7 @@
   align-items: center;
 
   @include largeTablet() {
-    margin-top: 0;
+    margin: 100px 0;
     flex-direction: row;
     align-items: stretch;
     justify-content: flex-start;
