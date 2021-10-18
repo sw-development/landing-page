@@ -171,10 +171,15 @@ $nav-links: home, about us, services, our goal, contact us, locales;
   z-index: 101;
   position: fixed;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
   background-color: transparent;
   padding: 15px;
   transition: 0.3s linear;
+
+  img {
+    display: block;
+  }
 
   @include largeTablet() {
     display: none;

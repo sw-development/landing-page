@@ -62,6 +62,11 @@ const index = (): JSX.Element => {
         } ${scrolled && !isActive && styles.hamburger__wrapper__sticky}`}
         ref={hamburgerWrapperRef}
       >
+        <Link href="#home">
+          <a>
+            <img src="/assets/logo-mobile.png" alt="logo" />
+          </a>
+        </Link>
         <button className={styles.hamburger} onClick={handleNavItemClick}>
           <span className={styles.hamburger__box}>
             <span
