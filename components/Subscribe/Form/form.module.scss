@@ -61,3 +61,10 @@
 .subscribe__form__customInputRoot {
   padding-left: 2px;
 }
+
+.subscribe__form__customInput {
+  &::placeholder {
+    color: rgba($black, .5) !important;
+    opacity: 1 !important;
+  }
+}

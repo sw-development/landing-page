@@ -55,6 +55,7 @@ const index: FC = () => {
               }
               classes={{
                 root: styles.subscribe__form__customInputRoot,
+                input: styles.subscribe__form__customInput,
               }}
               {...field}
             />
@@ -82,6 +83,7 @@ const index: FC = () => {
               type="email"
               classes={{
                 root: styles.subscribe__form__customInputRoot,
+                input: styles.subscribe__form__customInput
               }}
               placeholder={dictionary.forms.mainContactForm.fields.email.label}
               {...field}

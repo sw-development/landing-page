@@ -125,7 +125,11 @@ const index: FC = () => {
           render={({ field }) => (
             <Input
               className={styles.contact__form__textarea}
-              classes={{ root: styles.contact__form__customInputRoot }}
+              classes={{                 
+                root: styles.contact__form__customInputRoot,
+                focused: styles.contact__form__customInputFocused,
+                underline: styles.contact__form__customInputUnderline,
+                input: styles.contact__form__customInput, }}
               placeholder={
                 dictionary.forms.mainContactForm.fields.message.label
               }

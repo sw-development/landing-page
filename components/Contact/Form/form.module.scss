@@ -51,7 +51,6 @@
 
 .contact__form__customInputRoot {
   width: 100%;
-  color: rgba(255, 255, 255, 0.5) !important;
   line-height: 1.5 !important;
   font-size: 14px !important; // TODO: FCK CSS MODULES :)
   font-family: 'Open Sans', sans-serif !important;
@@ -64,7 +63,13 @@
 }
 
 .contact__form__customInput {
-  padding: 10px 0px !important;
+  padding: 10px 0 !important;
+  color: $white !important;
+  
+  &::placeholder {
+    color: rgba($white, .5) !important;
+    opacity: 1 !important;
+  }
 }
 
 .contact__form__validationError {
@@ -79,5 +84,18 @@
 
   @include largeTablet() {
     margin-top: 50px;
+  }
+}
+
+.contact__form__customInputUnderline {
+  &::before {
+    border-color: rgba($white, 0.75) !important;
+  }
+
+  &:hover {
+    &::before {
+      border-color: $white !important;
+      border-width: 1px !important;
+    }
   }
 }
