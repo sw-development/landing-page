@@ -1,12 +1,41 @@
-import React, { FC } from 'react';
+import React, { FC, useEffect, useRef } from 'react';
 import { useTranslation } from '../../hooks/useTranslation';
 import styles from './subscribe.module.scss';
 import Form from './Form/index';
 
+import { gsap } from 'gsap/dist/gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
 const index: FC = () => {
   const { dictionary } = useTranslation();
+
+  const wrapperRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const wrapper = wrapperRef.current;
+
+    gsap.fromTo(
+      wrapper,
+      { y: '+=100', opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        stagger: 0.2,
+        duration: 1,
+        ease: 'easeInOut',
+        scrollTrigger: {
+          trigger: wrapper,
+          start: '25% bottom',
+          end: '+=500',
+          scrub: true,
+        },
+      }
+    );
+  }, []);
   return (
-    <div className={styles.subscribe__wrapper} id="subscribe">
+    <div className={styles.subscribe__wrapper} id="subscribe" ref={wrapperRef}>
       <img
         className={styles.subscribe__yellow__decor}
         src="/assets/subscribeYellowDecor.svg"
