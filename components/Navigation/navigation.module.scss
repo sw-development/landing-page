@@ -107,18 +107,13 @@ $nav-links: home, about us, services, our goal, contact us, locales;
     transform: translateX(100%);
     transition: 0.2s all linear;
 
-    &:hover,
-    :focus {
-      color: $secondary-purple;
-      transform: translateY(-5px);
-      text-shadow: 0px 0px 1px;
-    }
-
-    &:last-of-type {
-      a {
-        width: auto;
-        padding: 10px 15px;
-        font-weight: 400;
+    &:not(:last-of-type) {
+      
+      &:hover,
+      &:focus {
+        color: $secondary-purple;
+        transform: translateY(-5px);
+        text-shadow: 0px 0px 1px;
       }
     }
   }
