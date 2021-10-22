@@ -17,15 +17,15 @@ export default {
       button: 'Get in touch',
     },
     develop: {
-      title: 'Develop powerful apps for your business',
+      title: 'Get solutions for your problems',
       description:
-        'We help our clients make realize their most Important business goals. Read what our team has published on the internet.Good newspaper Is a Nation talking to itself.',
+        'Are you facing issues with planning your business? Let our specialists solve your problems and be successful together.',
       button: 'KNOW MORE',
     },
     design: {
       title: 'Design solutions to improve products',
       description:
-        'We help our clients make realize their most Important business goals. Read what our team has published on the internet.Good newspaper Is a Nation talking to itself.',
+        'We deliver easy to use and user friendly products for your customers. Develop powerful apps for your business with our knowledge and experience.',
     },
     services: {
       main: {
@@ -37,12 +37,12 @@ export default {
     },
     subscribe: {
       title: 'Subscribe Company newsletter',
-      description: 'Newsletter'
+      description: 'Newsletter',
     },
     contact: {
       title: "Let's start with your dream project",
       subtitle: 'Get in touch',
-      description: 'We help our clients make realize their most',
+      description: 'Do you have any questions? Contact us!',
     },
     business: {
       mainCard: {
@@ -52,7 +52,7 @@ export default {
       goalCard: {
         title: 'Our Goal',
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris consequat volutpat arcu, sed imperdiet leo.',
+          'We help our clients realize their most important business goals.',
       },
       visionCard: {
         title: 'Our Vision',
@@ -89,17 +89,17 @@ export default {
       subscribeForm: {
         fields: {
           name: {
-            label: "Your name",
+            label: 'Your name',
             name: 'name',
-            validationError: 'Please provide your name'
+            validationError: 'Please provide your name',
           },
           email: {
             label: 'Email',
             name: 'email',
             validationError: 'Please provide email in correct format',
           },
-        }
-      }
+        },
+      },
     },
     common: {
       fieldRequired: 'This field is required',

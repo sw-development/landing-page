@@ -2,60 +2,60 @@ export default {
   components: {
     menu: {
       labels: {
-        home: 'Home',
-        aboutUs: 'About Us',
-        services: 'Services',
-        ourGoal: 'Our Goal',
-        contactUs: 'Contact us',
+        home: 'Strona główna',
+        aboutUs: 'O nas',
+        services: 'Usługi',
+        ourGoal: 'Nasz cel',
+        contactUs: 'Kontakt',
       },
     },
     hero: {
-      subTitle: 'our goal',
-      title: 'Better products for your users',
+      subTitle: 'nasz cel',
+      title: 'Lepsze produkty dla Twoich użytkowników',
       description:
-        'We help our clients realize their most important business goals. It’s a team, working together with you.',
-      button: 'Get in touch',
+        'Pomagamy naszym klientom realizować najważniejsze cele biznesowe. To zespół, który będzie pracować razem z Tobą.',
+      button: 'Kontakt',
     },
     develop: {
-      title: 'Develop powerful apps for your business',
+      title: 'Uzyskaj rozwiązania swoich problemów',
       description:
-        'We help our clients make realize their most Important business goals. Read what our team has published on the internet.Good newspaper Is a Nation talking to itself.',
-      button: 'KNOW MORE',
+        'Masz problemy z planowaniem swojego biznesu? Pozwól naszym specjalistom rozwiązać Twoje problemy i wspólnie odnieść sukces.',
+      button: 'Więcej',
     },
     design: {
-      title: 'Design solutions to improve products',
+      title: 'Projektuj rozwiązania w celu ulepszania produktów',
       description:
-        'We help our clients make realize their most Important business goals. Read what our team has published on the internet.Good newspaper Is a Nation talking to itself.',
+        'Dostarczamy Twoim klientom łatwe w użyciu i przyjazne dla użytkownika produkty. Twórz zaawansowane aplikacje dla swojej firmy dzięki naszej wiedzy i doświadczeniu.',
     },
     services: {
       main: {
-        subTitle: 'We help with',
-        title: 'Building better solutions',
-        button: 'Our Services',
+        subTitle: 'Pomagamy z',
+        title: 'Budowanie lepszych rozwiązań',
+        button: 'Nasze Usługi',
       },
       cards: {},
     },
     subscribe: {
-      title: 'Subscribe Company newsletter',
-      description: 'Newsletter'
+      title: 'Subskrybuj firmowy newsletter',
+      description: 'Newsletter',
     },
     contact: {
-      title: "Let's start with your dream project",
-      subtitle: 'Get in touch',
+      title: 'Zacznijmy od Twojego wymarzonego projektu',
+      subtitle: 'Kontakt',
       description: 'We help our clients make realize their most',
     },
     business: {
       mainCard: {
-        title: 'Helping your business grow',
-        subtitle: 'Digital agency',
+        title: 'Pomoc w rozwoju Twojej firmy',
+        subtitle: 'Agencja cyfrowa',
       },
       goalCard: {
-        title: 'Our Goal',
+        title: 'Nasz cel',
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris consequat volutpat arcu, sed imperdiet leo.',
+          'We help our clients realize their most important business goals.',
       },
       visionCard: {
-        title: 'Our Vision',
+        title: 'Nasza wizja',
         description:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris consequat volutpat arcu, sed imperdiet leo.',
       },
@@ -63,46 +63,46 @@ export default {
   },
   common: {
     buttons: {
-      knowMore: 'KNOW MORE',
-      submit: 'Submit',
+      knowMore: 'Więcej',
+      submit: 'Wyślij',
     },
   },
   forms: {
     mainContactForm: {
       fields: {
         email: {
-          label: 'Email',
+          label: 'E-mail',
           name: 'email',
-          validationError: 'Please provide email in correct format',
+          validationError: 'Podaj e-mail w prawidłowym formacie',
         },
         fullName: {
-          label: 'Full name',
+          label: 'Imię i nazwisko',
           name: 'fullName',
-          validationError: 'Please provide a full name',
+          validationError: 'Podaj imię i nazwisko',
         },
         message: {
-          label: 'Message',
+          label: 'Wiadomość',
           name: 'message',
-          validationError: 'Please provide a message',
+          validationError: 'Podaj wiadomość',
         },
       },
       subscribeForm: {
         fields: {
           name: {
-            label: "Your name",
+            label: 'Twoje imię',
             name: 'name',
-            validationError: 'Please provide your name'
+            validationError: 'Podaj swoje imię',
           },
           email: {
             label: 'Email',
             name: 'email',
-            validationError: 'Please provide email in correct format',
+            validationError: 'Podaj email w prawidłowym formacie',
           },
-        }
-      }
+        },
+      },
     },
     common: {
-      fieldRequired: 'This field is required',
+      fieldRequired: 'To pole jest wymagane',
     },
   },
 };
