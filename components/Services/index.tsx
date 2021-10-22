@@ -23,7 +23,7 @@ const index = (): JSX.Element => {
         y: 0,
         opacity: 1,
         stagger: 0.2,
-        duration: 1,
+        duration: 1.8,
         ease: 'easeInOut',
         scrollTrigger: {
           trigger: wrapper,
