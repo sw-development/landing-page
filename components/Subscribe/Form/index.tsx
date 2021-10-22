@@ -6,7 +6,7 @@ import { useForm, Controller } from 'react-hook-form';
 import { SubscribeFormData } from '@/../../infrastructure/interfaces/Forms/Contact';
 import { CHECK_IF_EMAIL_REGEX } from '@/../../utils/constants';
 import { handleAddSubscriber } from '@/../../repositories/contact';
-import Recaptcha from 'react-google-invisible-recaptcha';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 const defaultValues: SubscribeFormData = {
   email: '',
@@ -22,10 +22,11 @@ const index: FC = () => {
     reset,
     getValues,
   } = useForm<SubscribeFormData>({ defaultValues });
-  const recaptchaRef = useRef<Recaptcha>(null);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
 
   const onSubmit = (): void => {
     recaptchaRef.current.execute();
+    console.log("ELO")
   };
 
   const onRecaptchaResolved = async (): Promise<void> => {
@@ -33,7 +34,7 @@ const index: FC = () => {
       handleAddSubscriber(getValues());
       reset();
     } catch (error) {
-      console.log(error); // TODO: Provide some error toast
+      console.log(error);
     }
   };
 
@@ -83,7 +84,7 @@ const index: FC = () => {
               type="email"
               classes={{
                 root: styles.subscribe__form__customInputRoot,
-                input: styles.subscribe__form__customInput
+                input: styles.subscribe__form__customInput,
               }}
               placeholder={dictionary.forms.mainContactForm.fields.email.label}
               {...field}
@@ -109,10 +110,11 @@ const index: FC = () => {
         </span>
       </FormLabel>
 
-      <Recaptcha
+      <ReCAPTCHA
         ref={recaptchaRef}
         sitekey={process.env.siteKey}
-        onResolved={onRecaptchaResolved}
+        size="invisible"
+        onChange={onRecaptchaResolved}
       />
       <button
         type="submit"

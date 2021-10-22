@@ -65,9 +65,9 @@
 .contact__form__customInput {
   padding: 10px 0 !important;
   color: $white !important;
-  
+
   &::placeholder {
-    color: rgba($white, .5) !important;
+    color: rgba($white, 0.5) !important;
     opacity: 1 !important;
   }
 }

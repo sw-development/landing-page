@@ -1,12 +1,12 @@
 import React, { FC, useRef } from 'react';
 import { useTranslation } from '../../../hooks/useTranslation';
 import styles from './form.module.scss';
-import { FormLabel, Input, TextField } from '@material-ui/core';
+import { FormLabel, Input } from '@material-ui/core';
 import { useForm, Controller } from 'react-hook-form';
 import { ContactFormData } from '@/../../infrastructure/interfaces/Forms/Contact';
 import { CHECK_IF_EMAIL_REGEX } from '@/../../utils/constants';
 import { handleSendEmail } from '@/../../repositories/contact';
-import Recaptcha from 'react-google-invisible-recaptcha';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 const defaultValues: ContactFormData = {
   email: '',
@@ -23,7 +23,7 @@ const index: FC = () => {
     reset,
     getValues,
   } = useForm<ContactFormData>({ defaultValues });
-  const recaptchaRef = useRef<Recaptcha>(null);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
 
   const onSubmit = (): void => {
     recaptchaRef.current.execute();
@@ -125,11 +125,12 @@ const index: FC = () => {
           render={({ field }) => (
             <Input
               className={styles.contact__form__textarea}
-              classes={{                 
+              classes={{
                 root: styles.contact__form__customInputRoot,
                 focused: styles.contact__form__customInputFocused,
                 underline: styles.contact__form__customInputUnderline,
-                input: styles.contact__form__customInput, }}
+                input: styles.contact__form__customInput,
+              }}
               placeholder={
                 dictionary.forms.mainContactForm.fields.message.label
               }
@@ -146,10 +147,11 @@ const index: FC = () => {
           </span>
         )}
       </FormLabel>
-      <Recaptcha
+      <ReCAPTCHA
         ref={recaptchaRef}
         sitekey={process.env.siteKey}
-        onResolved={onRecaptchaResolved}
+        onChange={onRecaptchaResolved}
+        size="invisible"
       />
 
       <div>
