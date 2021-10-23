@@ -1,42 +1,18 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import { useTranslation } from '../../hooks/useTranslation';
 import styles from './services.module.scss';
 import Cards from '@/../../components/Services/Cards';
 import Link from 'next/link';
-
-import { gsap } from 'gsap/dist/gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
+import useScrollReveal from '../../hooks/useScrollReveal';
 
 const index = (): JSX.Element => {
   const { dictionary } = useTranslation();
-  const wrapperRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const wrapper = wrapperRef.current;
-
-    gsap.fromTo(
-      wrapper,
-      { y: '+=100', opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        stagger: 0.2,
-        duration: 2,
-        ease: 'easeInOut',
-        scrollTrigger: {
-          trigger: wrapper,
-          start: 'top bottom',
-          end: '+=500',
-          scrub: true,
-        },
-      }
-    );
-  }, []);
+  useScrollReveal({ sectionRef });
 
   return (
-    <div className={styles.services} id="services" ref={wrapperRef}>
+    <div className={styles.services} id="services" ref={sectionRef}>
       <div className={styles.services__wrapper}>
         <div className={styles['services__titles--wrapper']}>
           <div className={styles['services__subtitle--wrapper']}>

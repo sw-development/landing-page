@@ -1,41 +1,16 @@
-import React, { FC, useRef, useEffect } from 'react';
+import React, { FC, useRef } from 'react';
 import styles from './business.module.scss';
 import { useTranslation } from '../../hooks/useTranslation';
-
-import { gsap } from 'gsap/dist/gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
+import useScrollReveal from '../../hooks/useScrollReveal';
 
 const index: FC = () => {
   const { dictionary } = useTranslation();
 
-  const wrapperRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const wrapper = wrapperRef.current;
-
-    gsap.fromTo(
-      wrapper,
-      { y: '+=100', opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        stagger: 0.2,
-        duration: 2,
-        ease: 'easeInOut',
-        scrollTrigger: {
-          trigger: wrapper,
-          start: '25% bottom',
-          end: '+=500',
-          scrub: true,
-        },
-      }
-    );
-  }, []);
+  const sectionRef = useRef<HTMLDivElement>(null);
+  useScrollReveal({ sectionRef });
 
   return (
-    <div className={styles.business__wrapper} id="ourGoal" ref={wrapperRef}>
+    <div className={styles.business__wrapper} id="ourGoal" ref={sectionRef}>
       <div className={styles.business__heading__wrapper}>
         <div className={styles.business__main__card__subtitle}>
           <span>{dictionary.components.business.mainCard.subtitle}</span>

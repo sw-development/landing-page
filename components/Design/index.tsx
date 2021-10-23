@@ -1,39 +1,16 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
 import styles from './design.module.scss';
 import { useTranslation } from '../../hooks/useTranslation';
-import { gsap } from 'gsap/dist/gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
+import useScrollReveal from '../../hooks/useScrollReveal';
 
 const Design = () => {
   const { dictionary } = useTranslation();
-  const wrapperRef = useRef<HTMLDivElement>();
+  const sectionRef = useRef<HTMLDivElement>();
 
-  useEffect(() => {
-    const wrapper = wrapperRef.current;
-
-    gsap.fromTo(
-      wrapper,
-      { y: '+=100', opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        stagger: 0.2,
-        duration: 2,
-        ease: 'easeInOut',
-        scrollTrigger: {
-          trigger: wrapper,
-          start: '25% bottom',
-          end: '+=500',
-          scrub: true,
-        },
-      }
-    );
-  }, []);
+  useScrollReveal({ sectionRef });
 
   return (
-    <div className={styles.wrapper} id="about" ref={wrapperRef}>
+    <div className={styles.wrapper} id="about" ref={sectionRef}>
       <div className={styles['image-wrapper']}>
         <img src="/assets/design.png" alt="" />
       </div>
