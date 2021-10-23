@@ -58,7 +58,6 @@
 .business__subcards__wrapper {
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-direction: column;
   gap: 30px;
 
@@ -71,6 +70,9 @@
 .business__subcards__item {
   max-width: 300px;
   overflow: hidden;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
 
   h3 {
     font-family: 'Poppins', sans-serif;

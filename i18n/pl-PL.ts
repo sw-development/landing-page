@@ -42,7 +42,7 @@ export default {
     contact: {
       title: 'Zacznijmy od Twojego wymarzonego projektu',
       subtitle: 'Kontakt',
-      description: 'We help our clients make realize their most',
+      description: 'Masz pytania? Napisz do nas!',
     },
     business: {
       mainCard: {
@@ -52,12 +52,12 @@ export default {
       goalCard: {
         title: 'Nasz cel',
         description:
-          'We help our clients realize their most important business goals.',
+          'Pomagamy naszym klientom realizować najważniejsze cele biznesowe. To zespół, który będzie pracował razem z Tobą.',
       },
       visionCard: {
         title: 'Nasza wizja',
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris consequat volutpat arcu, sed imperdiet leo.',
+          'Naszą wizją jest tworzenie produktów dopasowanych idealnie do Twoich potrzeb oraz wymagań. Spełnijmy ją razem.',
       },
     },
   },

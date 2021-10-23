@@ -52,12 +52,12 @@ export default {
       goalCard: {
         title: 'Our Goal',
         description:
-          'We help our clients realize their most important business goals.',
+          'We help our clients realize their most important business goals. It’s a team, working together with you.',
       },
       visionCard: {
         title: 'Our Vision',
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris consequat volutpat arcu, sed imperdiet leo.',
+          "Our vision is to create solutions matched to Your needs and criterias. Let's fulfill it together.",
       },
     },
   },
