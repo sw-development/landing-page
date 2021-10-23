@@ -1,8 +1,13 @@
 import React, { useEffect } from 'react';
 
 interface HookProps {
-  sectionRef: React.MutableRefObject<HTMLDivElement>;
-  customOptions?: Record<string, unknown>;
+  sectionRef: React.MutableRefObject<HTMLElement>;
+  customOptions?: {
+    origin?: string;
+    delay?: number;
+    distance?: string;
+    duration?: number;
+  };
 }
 
 const useScrollReveal = (props: HookProps) => {

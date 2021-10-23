@@ -1,17 +1,48 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styles from './hero.module.scss';
 import { useTranslation } from '../../hooks/useTranslation';
+import useScrollReveal from '../../hooks/useScrollReveal';
 
 const Hero = () => {
   const { dictionary } = useTranslation();
+  const imageWrapperRef = useRef<HTMLDivElement>(null);
+  const contentSectionRef = useRef<HTMLDivElement>(null);
+  const mainDecorRef = useRef<HTMLImageElement>(null);
+
+  useScrollReveal({
+    sectionRef: contentSectionRef,
+    customOptions: {
+      origin: 'right',
+      distance: '60px',
+    },
+  });
+
+  useScrollReveal({
+    sectionRef: imageWrapperRef,
+    customOptions: {
+      origin: 'left',
+      distance: '60px',
+    },
+  });
+
+  useScrollReveal({
+    sectionRef: mainDecorRef,
+    customOptions: {
+      origin: 'top',
+      distance: '60px',
+      delay: 1000
+    },
+  });
+
   return (
     <header className={styles.hero} id="home">
       <img
         src="/assets/heroDesktopDecor.svg"
         alt=""
         className={styles.hero__content__decor__globe__dots}
+        ref={mainDecorRef}
       />
-      <div className={styles['hero__content-wrapper']}>
+      <div className={styles['hero__content-wrapper']} ref={contentSectionRef}>
         <img
           src="/assets/hero-dec.svg"
           alt=""
@@ -58,7 +89,7 @@ const Hero = () => {
           {dictionary.components.hero.button}
         </button>
       </div>
-      <div className={styles['hero__image-wrapper']}>
+      <div className={styles['hero__image-wrapper']} ref={imageWrapperRef}>
         <img
           src="/assets/hero.png"
           alt=""

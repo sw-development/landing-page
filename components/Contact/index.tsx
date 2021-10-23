@@ -8,7 +8,7 @@ const index: FC = () => {
   const { dictionary } = useTranslation();
 
   const sectionRef = useRef<HTMLDivElement>(null);
-  useScrollReveal({ sectionRef });
+  useScrollReveal({ sectionRef, customOptions: { duration: 1000 } });
 
   return (
     <div className={styles.contact__wrapper} id="contact" ref={sectionRef}>
