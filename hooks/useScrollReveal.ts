@@ -16,7 +16,6 @@ const useScrollReveal = (props: HookProps) => {
       const scrollReveal = require('scrollreveal').default;
       if (props.sectionRef.current) {
         scrollReveal().reveal(props.sectionRef.current, {
-          reset: true,
           duration: 2000,
           delay: 400,
           ...props.customOptions,

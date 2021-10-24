@@ -14,7 +14,7 @@ export default {
       title: 'Better products for your users',
       description:
         'We help our clients realize their most important business goals. It’s a team, working together with you.',
-      button: 'Get in touch',
+      button: 'Services',
     },
     develop: {
       title: 'Get solutions for your problems',
@@ -29,9 +29,9 @@ export default {
     },
     services: {
       main: {
-        subTitle: 'We help with',
+        subTitle: 'Services',
         title: 'Building better solutions',
-        button: 'Our Services',
+        button: "Let's talk",
       },
       cards: {},
     },
@@ -65,6 +65,7 @@ export default {
     buttons: {
       knowMore: 'KNOW MORE',
       submit: 'Submit',
+      subscribe: "Subscribe"
     },
   },
   forms: {

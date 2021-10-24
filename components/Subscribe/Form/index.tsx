@@ -120,7 +120,7 @@ const index: FC = () => {
         type="submit"
         className={`${styles.btn} ${styles['btn--outline']}`}
       >
-        {dictionary.common.buttons.submit}
+        {dictionary.common.buttons.subscribe}
       </button>
     </form>
   );

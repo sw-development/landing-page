@@ -14,7 +14,7 @@ export default {
       title: 'Lepsze produkty dla Twoich użytkowników',
       description:
         'Pomagamy naszym klientom realizować najważniejsze cele biznesowe. To zespół, który będzie pracować razem z Tobą.',
-      button: 'Kontakt',
+      button: 'Usługi',
     },
     develop: {
       title: 'Uzyskaj rozwiązania swoich problemów',
@@ -29,9 +29,9 @@ export default {
     },
     services: {
       main: {
-        subTitle: 'Pomagamy z',
+        subTitle: 'Usługi',
         title: 'Budowanie lepszych rozwiązań',
-        button: 'Nasze Usługi',
+        button: "Porozmawiajmy",
       },
       cards: {},
     },
@@ -65,6 +65,7 @@ export default {
     buttons: {
       knowMore: 'Więcej',
       submit: 'Wyślij',
+      subscribe: "Subskrybuj"
     },
   },
   forms: {
