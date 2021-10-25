@@ -23,7 +23,7 @@
   align-items: center;
   flex-direction: column;
 
-  @include largeTablet() {
+  @include desktop() {
     flex-direction: row;
   }
 }

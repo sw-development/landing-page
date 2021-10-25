@@ -3,7 +3,7 @@
   flex-direction: column;
   flex: 1;
   max-width: 360px;
-  min-height: 208px;
+  min-height: 278px;
   padding: 14px;
   border-radius: 10px;
   background: #2b2353;
@@ -11,6 +11,7 @@
 
   @include largeTablet() {
     padding: 30px;
+    min-height: 308px;
   }
 
   &:hover {
@@ -25,17 +26,17 @@
     }
 
     & > .card__link {
-        opacity: 1;
-        visibility: visible;
-        align-items: flex-end;
+      opacity: 1;
+      visibility: visible;
+      align-items: flex-end;
     }
   }
 }
 
 .card__image {
-    opacity: 1;
-    transition: 0.3s linear;
-    transform: scaleY(1);
+  opacity: 1;
+  transition: 0.3s linear;
+  transform: scaleY(1);
 }
 
 .card__title {
@@ -60,14 +61,14 @@
 }
 
 .card__link {
-    display: flex;
-    visibility: hidden;
-    opacity: 0;
-    flex: 1;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 140px;
-    font-weight: $weightSemibold;
-    font-size: 15px;
-    transition: 0.4s linear;
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 140px;
+  font-weight: $weightSemibold;
+  font-size: 15px;
+  transition: 0.4s linear;
 }
