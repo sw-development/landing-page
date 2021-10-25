@@ -33,7 +33,15 @@ export default {
         title: 'Building better solutions',
         button: "Let's talk",
       },
-      cards: {},
+      cards: {
+        webApp:
+          'Creating web applications based on the latest graphic trends and the most efficient technologies available on the market.',
+        design:
+          'Designing websites and applications from the graphic side to make using them intuitive and pleasant.',
+        maintenance:
+          'Maintaining the application means constantly updating, monitoring and modifying the software in order to improve bugs and performance.',
+        seo: 'Positioning of websites is a series of activities that allow you to place a website higher in the search results.',
+      },
     },
     subscribe: {
       title: 'Subscribe Company newsletter',
@@ -65,7 +73,7 @@ export default {
     buttons: {
       knowMore: 'KNOW MORE',
       submit: 'Submit',
-      subscribe: "Subscribe"
+      subscribe: 'Subscribe',
     },
   },
   forms: {

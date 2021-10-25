@@ -31,9 +31,17 @@ export default {
       main: {
         subTitle: 'Usługi',
         title: 'Budowanie lepszych rozwiązań',
-        button: "Porozmawiajmy",
+        button: 'Porozmawiajmy',
       },
-      cards: {},
+      cards: {
+        webApp:
+          'Tworzenie aplikacji internetowych w oparciu o najnowsze trendy graficzne oraz najbardziej wydajne technologie dostępne na rynku.',
+        design:
+          'Projektowanie stron internetowych i aplikacji od strony graficznej, aby korzystanie z nich było intuicyjne i przyjemne.',
+        maintenance:
+          'Utrzymywanie aplikacji to stałe aktualizowanie, monitorowanie oraz modyfikowanie oprogramowania w celu poprawy błędów oraz wydajności.',
+        seo: 'Pozycjonowanie stron internetowych to szereg działań pozwalających umieścić stronę internetową wyżej w wynikach wyszukiwania.',
+      },
     },
     subscribe: {
       title: 'Subskrybuj firmowy newsletter',
@@ -65,7 +73,7 @@ export default {
     buttons: {
       knowMore: 'Więcej',
       submit: 'Wyślij',
-      subscribe: "Subskrybuj"
+      subscribe: 'Subskrybuj',
     },
   },
   forms: {

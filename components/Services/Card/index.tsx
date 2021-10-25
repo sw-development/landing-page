@@ -1,20 +1,20 @@
 import React from 'react';
 import styles from './card.module.scss';
 import Image from 'next/image';
-import { Card } from '../../../infrastructure/interfaces/Cards';
+import {  MappedCard } from '../../../infrastructure/interfaces/Cards';
 import Link from 'next/link';
 
 interface ComponentProps {
-  card: Card;
+  card: MappedCard;
 }
 
 const index = React.memo((props: ComponentProps) => {
-  const { title, description, path } = props.card;
+  const { title, description, path, imageUrl } = props.card;
   return (
     <div className={styles.card__wrapper}>
       <div className={styles.card__image}>
         <Image
-          src="/assets/mockupMonitor.png"
+          src={imageUrl}
           layout="fixed"
           width="40px"
           height="40px"

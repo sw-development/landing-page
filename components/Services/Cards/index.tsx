@@ -1,12 +1,16 @@
 import React from 'react';
 import styles from './cards.module.scss';
 import Card from '@/../../components/Services/Card';
-import { CARDS } from '@/../../components/Services/Cards/constants';
+import { getMappedCards } from './mapper';
+import { useTranslation } from '../../../hooks/useTranslation';
 
 const index = (): JSX.Element => {
+  const { dictionary } = useTranslation();
+  const mappedCards = getMappedCards(dictionary);
+
   return (
     <div className={styles.cards__wrapper}>
-      {CARDS.map((card) => (
+      {mappedCards.map((card) => (
         <Card key={card.id} card={card} />
       ))}
     </div>

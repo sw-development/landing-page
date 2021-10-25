@@ -4,29 +4,29 @@ export const CARDS: Card[] = [
   {
     id: 'lorem-1-card', //TODO:  Set id based on card category
     title: 'Web Applications',
-    description:
-      'Tworzenie aplikacji internetowych w oparciu o najnowsze trendy graficzne oraz najbardziej wydajne technologie dostępne na rynku.',
+    descriptionKey: 'webApp',
     path: '#contact',
+    imageUrl: '/assets/webApps.svg',
   },
   {
     id: 'lorem-2-card',
     title: 'UI & UX Design',
-    description:
-      'Projektowanie stron internetowych i aplikacji od strony graficznej, aby korzystanie z nich było intuicyjne i przyjemne.',
+    descriptionKey: 'design',
     path: '#contact',
+    imageUrl: '/assets/design.svg',
   },
   {
     id: 'lorem-3-card',
     title: 'Maintenance',
-    description:
-      'Utrzymywanie aplikacji to stałe aktualizowanie, monitorowanie oraz modyfikowanie oprogramowania w celu poprawy błędów oraz wydajności.',
+    descriptionKey: 'maintenance',
     path: '#contact',
+    imageUrl: '/assets/maintenance.svg',
   },
   {
     id: 'lorem-4-card',
     title: 'Seo',
-    description:
-      'Pozycjonowanie stron internetowych to szereg działań pozwalających umieścić stronę internetową wyżej w wynikach wyszukiwania.',
+    descriptionKey: 'seo',
     path: '#contact',
+    imageUrl: '/assets/seo.svg',
   },
 ];
