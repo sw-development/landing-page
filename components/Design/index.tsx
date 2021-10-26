@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import styles from './design.module.scss';
 import { useTranslation } from '../../hooks/useTranslation';
 import useScrollReveal from '../../hooks/useScrollReveal';
+import Link from 'next/link';
 
 const Design = () => {
   const { dictionary } = useTranslation();
@@ -24,9 +25,11 @@ const Design = () => {
         <p className={styles.description}>
           {dictionary.components.design.description}
         </p>
-        <button type="button" className={styles.btn}>
-          {dictionary.common.buttons.knowMore}
-        </button>
+        <Link href="#contact">
+          <button type="button" className={styles.btn}>
+            {dictionary.common.buttons.knowMore}
+          </button>
+        </Link>
       </div>
     </div>
   );

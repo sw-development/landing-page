@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import styles from './hero.module.scss';
 import { useTranslation } from '../../hooks/useTranslation';
 import useScrollReveal from '../../hooks/useScrollReveal';
+import Link from 'next/link';
 
 const Hero = () => {
   const { dictionary } = useTranslation();
@@ -30,7 +31,7 @@ const Hero = () => {
     customOptions: {
       origin: 'top',
       distance: '60px',
-      delay: 1000
+      delay: 1000,
     },
   });
 
@@ -85,9 +86,11 @@ const Hero = () => {
         <p className={styles.hero__description}>
           {dictionary.components.hero.description}
         </p>
-        <button type="button" className={styles.btn}>
-          {dictionary.components.hero.button}
-        </button>
+        <Link href="#services">
+          <button type="button" className={styles.btn}>
+            {dictionary.components.hero.button}
+          </button>
+        </Link>
       </div>
       <div className={styles['hero__image-wrapper']} ref={imageWrapperRef}>
         <img

@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import styles from './develop.module.scss';
 import { useTranslation } from '../../hooks/useTranslation';
 import useScrollReveal from '../../hooks/useScrollReveal';
+import Link from 'next/link';
 
 const Develop = () => {
   const { dictionary } = useTranslation();
@@ -24,12 +25,14 @@ const Develop = () => {
           <p className={styles.description}>
             {dictionary.components.develop.description}
           </p>
-          <button
-            type="button"
-            className={`${styles.btn} ${styles['btn--outline']}`}
-          >
-            {dictionary.common.buttons.knowMore}
-          </button>
+          <Link href="#contact">
+            <button
+              type="button"
+              className={`${styles.btn} ${styles['btn--outline']}`}
+            >
+              {dictionary.common.buttons.knowMore}
+            </button>
+          </Link>
         </div>
       </div>
       <div className={styles['image-wrapper']}>
