@@ -13,16 +13,19 @@ interface HookProps {
 const useScrollReveal = (props: HookProps) => {
   useEffect(() => {
     if (typeof window !== undefined) {
-      const scrollReveal = require('scrollreveal').default;
-      if (props.sectionRef.current) {
-        scrollReveal().reveal(props.sectionRef.current, {
-          duration: 2000,
-          delay: 400,
-          ...props.customOptions,
-        });
+      async function animate() {
+        if (props.sectionRef.current) {
+          const sr = (await import('scrollreveal')).default;
+          sr().reveal(props.sectionRef.current, {
+            duration: 2000,
+            delay: 400,
+            ...props.customOptions,
+          });
+        }
       }
+      animate();
     }
-  }, [props]);
+  }, []);
 };
 
 export default useScrollReveal;
