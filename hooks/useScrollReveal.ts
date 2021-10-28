@@ -13,7 +13,7 @@ interface HookProps {
 const useScrollReveal = (props: HookProps) => {
   useEffect(() => {
     if (typeof window !== undefined) {
-      async function animate() {
+      (async () => {
         if (props.sectionRef.current) {
           const sr = (await import('scrollreveal')).default;
           sr().reveal(props.sectionRef.current, {
@@ -22,8 +22,7 @@ const useScrollReveal = (props: HookProps) => {
             ...props.customOptions,
           });
         }
-      }
-      animate();
+      })();
     }
   }, []);
 };
