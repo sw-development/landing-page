@@ -1,0 +1,14 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  color: $gray;
+  background-color: $secondary-blue;
+}
+
+.footer__email {
+  margin-top: 8px;
+  font-size: 14px;
+}

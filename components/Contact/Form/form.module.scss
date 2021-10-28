@@ -1,0 +1,101 @@
+.contact__form {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: stretch;
+  max-width: 600px;
+  max-height: 456px;
+  margin-top: 25px;
+
+  ::placeholder {
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.5);
+
+    @include largeTablet() {
+      font-size: 16px;
+    }
+  }
+
+  @include largeTablet() {
+    margin-top: 0px;
+    margin-left: 60px;
+  }
+
+  @include desktop() {
+    margin-left: 80px;
+  }
+}
+
+.contact__form__input__custom {
+  width: 100%;
+}
+
+.contact__form__label__custom {
+  border: none;
+
+  div {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.contact__form__label__custom__email,
+.contact__form__label__custom__fullName {
+  margin-bottom: 20px;
+
+  @include largeTablet() {
+    margin-bottom: 40px;
+  }
+}
+
+.contact__form__customInputRoot {
+  width: 100%;
+  line-height: 1.5 !important;
+  font-size: 14px !important; // TODO: FCK CSS MODULES :)
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: $weightLight !important;
+  height: 48px;
+
+  @include largeTablet() {
+    font-size: 16px !important;
+  }
+}
+
+.contact__form__customInput {
+  padding: 10px 0 !important;
+  color: $white !important;
+
+  &::placeholder {
+    color: rgba($white, 0.5) !important;
+    opacity: 1 !important;
+  }
+}
+
+.contact__form__validationError {
+  font-size: 14px;
+  color: $brightRed;
+  padding: 4px 0px;
+}
+
+.contact__form__btn {
+  margin-top: 20px;
+  color: $white;
+
+  @include largeTablet() {
+    margin-top: 50px;
+  }
+}
+
+.contact__form__customInputUnderline {
+  &::before {
+    border-color: rgba($white, 0.75) !important;
+  }
+
+  &:hover {
+    &::before {
+      border-color: $white !important;
+      border-width: 1px !important;
+    }
+  }
+}
