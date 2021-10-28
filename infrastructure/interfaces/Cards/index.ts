@@ -1,11 +1,12 @@
 export interface Card {
   id: string;
-  title: string;
+  titleKey: string;
   descriptionKey: string;
   path: string;
   imageUrl: string;
 }
 
 export interface MappedCard extends Card {
-  description;
+  title: string;
+  description: string;
 }

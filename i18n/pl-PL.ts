@@ -42,6 +42,12 @@ export default {
           'Utrzymywanie aplikacji to stałe aktualizowanie, monitorowanie oraz modyfikowanie oprogramowania w celu poprawy błędów oraz wydajności.',
         seo: 'Pozycjonowanie stron internetowych to szereg działań pozwalających umieścić stronę internetową wyżej w wynikach wyszukiwania.',
       },
+      cards_titles: {
+        webApp: 'Aplikacje Internetowe',
+        design: 'Projekty Graficzne',
+        maintenance: 'Wsparcie',
+        seo: 'Seo',
+      },
     },
     subscribe: {
       title: 'Subskrybuj firmowy newsletter',

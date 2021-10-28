@@ -3,12 +3,14 @@ import styles from './card.module.scss';
 import Image from 'next/image';
 import {  MappedCard } from '../../../infrastructure/interfaces/Cards';
 import Link from 'next/link';
+import { useTranslation } from '../../../hooks/useTranslation';
 
 interface ComponentProps {
   card: MappedCard;
 }
 
 const index = React.memo((props: ComponentProps) => {
+  const { dictionary } = useTranslation();
   const { title, description, path, imageUrl } = props.card;
   return (
     <div className={styles.card__wrapper}>
@@ -25,7 +27,7 @@ const index = React.memo((props: ComponentProps) => {
       <p className={styles.card__description}>{description}</p>
       <Link href={path}>
         <a className={styles.card__link}>
-          Know more
+          {dictionary.common.buttons.knowMore}
           <img src="/assets/arrowWhite.svg" alt="" />
         </a>
       </Link>

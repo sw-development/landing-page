@@ -42,6 +42,12 @@ export default {
           'Maintaining the application means constantly updating, monitoring and modifying the software in order to improve bugs and performance.',
         seo: 'Positioning of websites is a series of activities that allow you to place a website higher in the search results.',
       },
+      cards_titles: {
+        webApp: "Web Applications",
+        design: "UI & UX Design",
+        maintenance: "Maintenance",
+        seo: "Seo"
+      }
     },
     subscribe: {
       title: 'Subscribe Company newsletter',
@@ -71,7 +77,7 @@ export default {
   },
   common: {
     buttons: {
-      knowMore: 'KNOW MORE',
+      knowMore: 'Know More',
       submit: 'Submit',
       subscribe: 'Subscribe',
     },

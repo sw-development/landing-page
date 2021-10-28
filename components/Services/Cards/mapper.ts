@@ -8,5 +8,6 @@ export const getMappedCards = (
 ): MappedCard[] =>
   CARDS.map((card) => ({
     ...card,
+    title: dictionary.components.services.cards_titles[card.titleKey],
     description: dictionary.components.services.cards[card.descriptionKey],
   }));
