@@ -77,7 +77,7 @@ export default {
   },
   common: {
     buttons: {
-      knowMore: 'Więcej',
+      knowMore: 'Sprawdź więcej',
       submit: 'Wyślij',
       subscribe: 'Subskrybuj',
     },
