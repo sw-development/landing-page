@@ -120,4 +120,5 @@ export default {
       fieldRequired: 'To pole jest wymagane',
     },
   },
+  siteTitle: 'SW Development',
 };

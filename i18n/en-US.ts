@@ -120,4 +120,5 @@ export default {
       fieldRequired: 'This field is required',
     },
   },
+  siteTitle: "SW Development"
 };
