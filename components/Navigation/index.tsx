@@ -123,7 +123,7 @@ const index = (): JSX.Element => {
                 </a>
               </Link>
             </li>
-            <li>
+            <li onClick={handleNavItemClick}>
               <LanguagePicker />
             </li>
           </ul>
