@@ -43,11 +43,11 @@ export default {
         seo: 'Positioning of websites is a series of activities that allow you to place a website higher in the search results.',
       },
       cards_titles: {
-        webApp: "Web Applications",
-        design: "UI & UX Design",
-        maintenance: "Maintenance",
-        seo: "Seo"
-      }
+        webApp: 'Web Applications',
+        design: 'UI & UX Design',
+        maintenance: 'Maintenance',
+        seo: 'Seo',
+      },
     },
     subscribe: {
       title: 'Subscribe Company newsletter',
@@ -120,5 +120,9 @@ export default {
       fieldRequired: 'This field is required',
     },
   },
-  siteTitle: "SW Development"
+  siteTitle: 'SW Development',
+  siteDescription:
+    "SW Development is a company that creates websites, blogs, graphic designs, online stores, and all kinds of software. If there is such a need, let's deal with the SEO of your website and its maintenance.",
+  socialMediaDescription:
+    "We are a company that creates websites, blogs, graphic designs, online stores, and all kinds of software. If there is such a need, let's deal with the SEO of your website and its maintenance.",
 };
