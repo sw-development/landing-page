@@ -8,10 +8,19 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>{dictionary.siteTitle}</title>
-        <meta property="og:title" lang="pl" content={dictionary.siteTitle} />
-        <meta property="og:title" lang="en-US" content={dictionary.siteTitle} />
-        <meta name="twitter:title" lang="pl" content={dictionary.siteTitle} />
-        <meta name="twitter:title" lang="en-US" content={dictionary.siteTitle} />
+        <meta name="description" content={dictionary.siteDescription} />
+        <meta property="og:title" content={dictionary.siteTitle} />
+        <meta
+          property="og:description"
+          content={dictionary.socialMediaDescription}
+        />
+        <meta property="og:image" content="/assets/fb-image.jpg" />
+        <meta name="twitter:title" content={dictionary.siteTitle} />
+        <meta
+          name="twitter:description"
+          content={dictionary.socialMediaDescription}
+        />
+        <meta name="twitter:image" content="/assets/fb-image.jpg" />
       </Head>
       <Component {...pageProps} />
     </>
