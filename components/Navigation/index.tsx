@@ -64,7 +64,7 @@ const index = (): JSX.Element => {
       >
         <Link href="#home">
           <a>
-            <img src="/assets/logo-mobile.svg" alt="logo" />
+            <img src="/assets/logo-mobile.png" alt="logo" />
           </a>
         </Link>
         <button className={styles.hamburger} onClick={handleNavItemClick}>
@@ -87,7 +87,7 @@ const index = (): JSX.Element => {
           <div onClick={handleNavItemClick}>
             <Link href="#home">
               <a>
-                <img src="/assets/logo.svg" alt="logo" />
+                <img src="/assets/logo.png" alt="logo" />
               </a>
             </Link>
           </div>
