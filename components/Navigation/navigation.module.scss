@@ -93,7 +93,8 @@ $nav-links: home, about us, services, our goal, contact us, locales;
 .navigation__list {
   display: flex;
   width: 100%;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
   padding: 0px;
@@ -120,8 +121,8 @@ $nav-links: home, about us, services, our goal, contact us, locales;
 
   @include mobile() {
     li {
-      padding: 5px;
-      margin: 10px 0px;
+      padding: 3px;
+      margin: 5px 0px;
     }
   }
 
