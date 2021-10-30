@@ -19,7 +19,7 @@ const index = (): JSX.Element => {
 
   const handleTopBarSticky = () => {
     const pageOffset = window.scrollY;
-    if (pageOffset > 200) {
+    if (pageOffset > 20) {
       setScrolled(true);
     } else {
       setScrolled(false);
