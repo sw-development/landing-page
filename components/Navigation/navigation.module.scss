@@ -102,19 +102,19 @@ $nav-links: home, about us, services, our goal, contact us, locales;
   padding-top: 66px;
   overflow: hidden;
 
-  @media (orientation: landscape) {
-    height: 100%;
-  }
-
   & > li {
     width: 100%;
     text-align: center;
     padding: 10px 0px;
-    margin: 5px 0px;
+    margin: 12px 0px;
     cursor: pointer;
     transform: translateX(100%);
     transition: 0.2s all linear;
     font-size: 14px;
+
+    @media (orientation: landscape) {
+      margin: 2px 0px;
+    }
 
     &:not(:last-of-type) {
       &:hover,
