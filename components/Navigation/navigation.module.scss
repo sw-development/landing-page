@@ -100,7 +100,7 @@ $nav-links: home, about us, services, our goal, contact us, locales;
   align-items: center;
   justify-content: space-around;
   padding-top: 80px;
-  overflow-y: auto;
+  overflow: hidden;
 
   & > li {
     width: 100%;
@@ -127,6 +127,8 @@ $nav-links: home, about us, services, our goal, contact us, locales;
   }
 
   @include mobile() {
+    overflow-y: auto;
+
     li {
       padding: 3px;
       margin: 5px 0px;
