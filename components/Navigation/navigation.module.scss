@@ -101,6 +101,11 @@ $nav-links: home, about us, services, our goal, contact us, locales;
   justify-content: center;
   overflow: hidden;
 
+  @media (orientation: landscape) {
+    height: 100%;
+    padding-top: 66px;
+  }
+
   & > li {
     width: 100%;
     text-align: center;
