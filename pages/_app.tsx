@@ -9,13 +9,13 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title>{dictionary.siteTitle}</title>
         <meta name="description" content={dictionary.siteDescription} />
-        <meta property="og:title" content={dictionary.siteTitle} />
+        <meta property="og:title" content={dictionary.socialMediaTitle} />
         <meta
           property="og:description"
           content={dictionary.socialMediaDescription}
         />
         <meta property="og:image" content="/assets/fb-image.jpg" />
-        <meta name="twitter:title" content={dictionary.siteTitle} />
+        <meta name="twitter:title" content={dictionary.socialMediaTitle} />
         <meta
           name="twitter:description"
           content={dictionary.socialMediaDescription}
