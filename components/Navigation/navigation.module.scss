@@ -156,6 +156,7 @@ $nav-links: home, about us, services, our goal, contact us, locales;
       margin: 0px 20px;
       width: fit-content;
       text-align: center;
+      font-size: var(--font-sm);
 
       &:last-of-type {
         margin: 0px;
