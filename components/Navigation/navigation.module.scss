@@ -60,6 +60,7 @@ $nav-links: home, about us, services, our goal, contact us, locales;
 
   @include largeTablet() {
     height: auto;
+    overflow: visible;
   }
 
   & > div {
