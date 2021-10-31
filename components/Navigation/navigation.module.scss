@@ -99,14 +99,18 @@ $nav-links: home, about us, services, our goal, contact us, locales;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding-top: 80px;
+  padding-top: 66px;
   overflow: hidden;
+
+  @media (orientation: landscape) {
+    height: 100%;
+  }
 
   & > li {
     width: 100%;
     text-align: center;
-    padding: 15px 0px;
-    margin: 5px;
+    padding: 10px 0px;
+    margin: 5px 0px;
     cursor: pointer;
     transform: translateX(100%);
     transition: 0.2s all linear;
@@ -131,7 +135,6 @@ $nav-links: home, about us, services, our goal, contact us, locales;
 
     li {
       padding: 3px;
-      margin: 5px 0px;
     }
   }
 
