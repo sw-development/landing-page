@@ -98,14 +98,13 @@ $nav-links: home, about us, services, our goal, contact us, locales;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   padding-top: 80px;
   overflow: hidden;
 
   & > li {
     width: 100%;
     text-align: center;
-    margin: 15px 0;
     padding: 15px 0px;
     cursor: pointer;
     transform: translateX(100%);
@@ -148,6 +147,7 @@ $nav-links: home, about us, services, our goal, contact us, locales;
     width: 85%;
     height: 100%;
     justify-content: flex-end;
+    overflow: visible;
 
     li {
       transform: translateX(0%);
