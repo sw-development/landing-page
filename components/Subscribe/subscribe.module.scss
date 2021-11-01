@@ -87,10 +87,15 @@
 }
 
 .subscribe__x__decor {
+  display: none;
   position: absolute;
   bottom: 5%;
   right: 10%;
   opacity: 0.5;
+
+  @include tablet() {
+    display: block;
+  }
 
   @include largeTablet() {
     top: 20%;
@@ -98,18 +103,23 @@
 }
 
 .subscribe__shape__decor {
+  display: none;
   position: absolute;
   bottom: 3%;
   left: 4%;
   opacity: 0.5;
   transform: rotate(10deg);
 
+  @include tablet() {
+    display: block;
+  }
+
   @include largeTablet() {
     bottom: 20%;
   }
 }
 
-.subscribe__box__decor{
+.subscribe__box__decor {
   position: absolute;
   top: 10%;
   right: 0%;
