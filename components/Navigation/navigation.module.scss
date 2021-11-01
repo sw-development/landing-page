@@ -116,7 +116,7 @@ $nav-links: home, about us, services, our goal, contact us, locales;
     font-size: 14px;
 
     @media (orientation: landscape) {
-      margin: 2px 0px;
+      margin: 4px 0px;
     }
 
     &:not(:last-of-type) {
@@ -130,6 +130,10 @@ $nav-links: home, about us, services, our goal, contact us, locales;
 
     .btn {
       padding: 8px 18px;
+
+      a {
+        display: inline-block;
+      }
     }
   }
 
