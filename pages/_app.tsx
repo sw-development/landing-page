@@ -14,19 +14,13 @@ function MyApp({ Component, pageProps }) {
           property="og:description"
           content={dictionary.socialMediaDescription}
         />
-        <meta
-          property="og:image"
-          content="https://i.ibb.co/ssT3YCV/fb-image.jpg"
-        />
+        <meta property="og:image" content="/assets/fb-image.jpg" />
         <meta name="twitter:title" content={dictionary.socialMediaTitle} />
         <meta
           name="twitter:description"
           content={dictionary.socialMediaDescription}
         />
-        <meta
-          name="twitter:image"
-          content="https://i.ibb.co/NtRkpkj/twitter-image.jpg"
-        />
+        <meta name="twitter:image" content="/assets/twitter-image.jpg" />
       </Head>
       <Component {...pageProps} />
     </>
