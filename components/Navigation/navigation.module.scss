@@ -102,6 +102,7 @@ $nav-links: home, about us, services, our goal, contact us, locales;
   @media (orientation: landscape) {
     height: 100%;
     padding-top: 66px;
+    justify-content: flex-start;
   }
 
   & > li {
@@ -140,7 +141,7 @@ $nav-links: home, about us, services, our goal, contact us, locales;
 
   @include tablet() {
     li {
-      margin: 5px 0px;
+      margin: 8px 0px;
     }
   }
 
