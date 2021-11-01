@@ -126,4 +126,6 @@ export default {
   socialMediaTitle: 'Tworzenie stron i aplikacji internetowych | SWD',
   socialMediaDescription:
     'Jesteśmy firmą zajmująca się tworzeniem stron internetowych, blogów, projektów graficznych, sklepów internetowych oraz wszelkiego rodzaju oprogramowania. Jeżeli zaistnieje taka potrzeba to zajmiejmy się pozycjonowaniem Twojej strony oraz jej utrzymaniem.',
+  facebookImage: '/assets/fb.jpg',
+  twitterImage: '/assets/twitter.jpg',
 };

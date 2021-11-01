@@ -14,12 +14,9 @@ function MyApp({ Component, pageProps }) {
           property="og:description"
           content={dictionary.socialMediaDescription}
         />
-        <meta property="og:image" content="/assets/fb-image.jpg" />
+        <meta property="og:image" content={dictionary.facebookImage} />
         <meta name="twitter:title" content={dictionary.socialMediaTitle} />
-        <meta
-          name="twitter:description"
-          content={dictionary.socialMediaDescription}
-        />
+        <meta name="twitter:description" content={dictionary.twitterImage} />
         <meta name="twitter:image" content="/assets/twitter-image.jpg" />
       </Head>
       <Component {...pageProps} />
