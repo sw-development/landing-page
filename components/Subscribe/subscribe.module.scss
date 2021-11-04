@@ -110,12 +110,12 @@
   opacity: 0.5;
   transform: rotate(10deg);
 
-  @include tablet() {
-    display: block;
-  }
-
   @include largeTablet() {
     bottom: 20%;
+  }
+
+  @include largeDesktop() {
+    display: block;
   }
 }
 

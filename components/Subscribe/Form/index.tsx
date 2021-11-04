@@ -26,7 +26,7 @@ const index: FC = () => {
 
   const onSubmit = (): void => {
     recaptchaRef.current.execute();
-    console.log("ELO")
+    console.log('ELO');
   };
 
   const onRecaptchaResolved = async (): Promise<void> => {
@@ -59,6 +59,7 @@ const index: FC = () => {
                 input: styles.subscribe__form__customInput,
               }}
               {...field}
+              id="input-field"
             />
           )}
           rules={{ required: true }}
@@ -88,6 +89,7 @@ const index: FC = () => {
               }}
               placeholder={dictionary.forms.mainContactForm.fields.email.label}
               {...field}
+              id="input-field"
             />
           )}
           rules={{

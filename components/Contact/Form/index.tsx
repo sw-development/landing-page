@@ -1,4 +1,4 @@
-import React, { FC, useRef } from 'react';
+import React, { FC, useRef, useEffect } from 'react';
 import { useTranslation } from '../../../hooks/useTranslation';
 import styles from './form.module.scss';
 import { FormLabel, Input } from '@material-ui/core';
@@ -38,6 +38,32 @@ const index: FC = () => {
     }
   };
 
+  const handleFocusIn = (wrapper: HTMLMenuElement) => {
+    if (window.screen.availWidth < 992) {
+      return wrapper.style.display = 'none';
+    }
+  };
+
+  const handleFocusOut = (wrapper: HTMLMenuElement) => {
+    if (window.screen.availWidth < 992) {
+      return wrapper.style.display = 'flex';
+    }
+  };
+
+  useEffect(() => {
+    const inputs = document.querySelectorAll('#input-field');
+    const navigationWrapper: HTMLMenuElement = document.querySelector('#navigation-wrapper');
+    console.log(inputs)
+
+    inputs.forEach((input) => {
+      input.addEventListener('focusin', () => handleFocusIn(navigationWrapper));
+    });
+
+    inputs.forEach((input) => {
+      input.addEventListener('focusout', () => handleFocusOut(navigationWrapper));
+    });
+  }, []);
+
   return (
     <form className={styles.contact__form} onSubmit={handleSubmit(onSubmit)}>
       <FormLabel
@@ -59,6 +85,7 @@ const index: FC = () => {
               }}
               placeholder={dictionary.forms.mainContactForm.fields.email.label}
               {...field}
+              id="input-field"
             />
           )}
           rules={{
@@ -103,6 +130,7 @@ const index: FC = () => {
                 input: styles.contact__form__customInput,
               }}
               {...field}
+              id="input-field"
             />
           )}
           rules={{ required: true }}
@@ -137,6 +165,7 @@ const index: FC = () => {
               {...field}
               multiline
               rows={5}
+              id="input-field"
             />
           )}
           rules={{ required: true }}

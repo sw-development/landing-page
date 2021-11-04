@@ -57,6 +57,7 @@ const index = (): JSX.Element => {
   return (
     <>
       <div
+        id="navigation-wrapper"
         className={`${styles.hamburger__wrapper} ${
           isActive && styles.hamburger__wrapper__transparent
         } ${scrolled && !isActive && styles.hamburger__wrapper__sticky}`}
