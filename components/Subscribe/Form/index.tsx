@@ -59,7 +59,7 @@ const index: FC = () => {
                 input: styles.subscribe__form__customInput,
               }}
               {...field}
-              id="#input-field"
+              id="input-field"
             />
           )}
           rules={{ required: true }}
@@ -89,7 +89,7 @@ const index: FC = () => {
               }}
               placeholder={dictionary.forms.mainContactForm.fields.email.label}
               {...field}
-              id="#input-field"
+              id="input-field"
             />
           )}
           rules={{
