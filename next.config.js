@@ -20,9 +20,9 @@ module.exports = {
       prependData: `@import "@/../../styles/main.scss";`
     },
     env: {
-      emailTemplateId: 'template_uel1aqp',
-      emailServiceId: 'service_2bbpdwl',
-      emailUserId: 'user_2m5hBmdNWFtGobfUqpRU7',
-      siteKey: '6Lf3teUcAAAAAIZc10fWV-Y5Dyb9xyfrSZq-57gH'
+      EMAIL_TEMPLATE_ID: 'template_uel1aqp',
+      EMAIL_SERVICE_ID: 'service_2bbpdwl',
+      EMAIL_USER_ID: 'user_2m5hBmdNWFtGobfUqpRU7',
+      SITE_KEY: '6Lf3teUcAAAAAIZc10fWV-Y5Dyb9xyfrSZq-57gH'
     }
   }

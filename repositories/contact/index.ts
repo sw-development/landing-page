@@ -5,14 +5,14 @@ export const handleSendEmail = (
   data: ContactFormData
 ): Promise<EmailJSResponseStatus> => {
   return emailjs.send(
-    process.env.emailServiceId,
-    process.env.emailTemplateId,
+    process.env.EMAIL_SERVICE_ID,
+    process.env.EMAIL_TEMPLATE_ID,
     {
       message: data.message,
       fullName: data.fullName,
       reply_to: data.email,
     },
-    process.env.emailUserId
+    process.env.EMAIL_USER_ID
   );
 };
 
@@ -20,12 +20,12 @@ export const handleAddSubscriber = (
   data: SubscribeFormData
 ): Promise<EmailJSResponseStatus> => {
   return emailjs.send(
-    process.env.emailServiceId,
-    process.env.emailTemplateId,
+    process.env.EMAIL_SERVICE_ID,
+    process.env.EMAIL_TEMPLATE_ID,
     {
       email: data.email,
       name: data.name,
     },
-    process.env.emailUserId
+    process.env.EMAIL_USER_ID
   );
 }; // TODO: CO bedziemy robić z tymi osobami co wysyłają się do suba? :O

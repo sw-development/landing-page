@@ -177,7 +177,7 @@ const index: FC = () => {
       </FormLabel>
       <ReCAPTCHA
         ref={recaptchaRef}
-        sitekey={process.env.siteKey}
+        sitekey={process.env.SITE_KEY}
         onChange={onRecaptchaResolved}
         size="invisible"
       />
