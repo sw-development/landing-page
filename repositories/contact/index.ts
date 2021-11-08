@@ -21,10 +21,10 @@ export const handleAddSubscriber = (
 ): Promise<EmailJSResponseStatus> => {
   return emailjs.send(
     process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID,
-    process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID,
+    process.env.NEXT_PUBLIC_EMAIL_SUBSCRIBE_TEMPLATE_ID,
     {
       email: data.email,
-      name: data.name,
+      name: data.name,  
     },
     process.env.NEXT_PUBLIC_EMAIL_USER_ID
   );
