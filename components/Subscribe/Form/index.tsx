@@ -110,7 +110,6 @@ const index: FC = () => {
             dictionary.forms.mainContactForm.fields.email.validationError}
         </span>
       </FormLabel>
-      {console.log(process.env.NEXT_PUBLIC_SITE_KEY)}
 
       <ReCAPTCHA
         ref={recaptchaRef}
