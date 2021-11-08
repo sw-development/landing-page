@@ -114,6 +114,7 @@ $nav-links: home, about us, services, our goal, contact us, locales;
     transform: translateX(100%);
     transition: 0.2s all linear;
     font-size: 14px;
+    font-weight: 500;
 
     @media (orientation: landscape) {
       margin: 4px 0px;

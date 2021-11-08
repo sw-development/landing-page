@@ -33,7 +33,15 @@
   flex-direction: column;
   flex: 1;
   justify-content: stretch;
-  max-width: 372px;
+  align-items: center;
+  max-width: 600px;
+  text-align: center;
+
+  @include desktop() {
+    align-items: stretch;
+    max-width: 372px;
+    text-align: left;
+  }
 }
 
 .services__subtitle--wrapper {
