@@ -120,7 +120,7 @@ export default {
       fieldRequired: 'This field is required',
     },
   },
-  siteTitle: 'SW Development',
+  siteTitle: 'SW Devs',
   siteDescription:
     "SW Development is a company that creates websites, blogs, graphic designs, online stores, and all kinds of software. If there is such a need, let's deal with the SEO of your website and its maintenance.",
   socialMediaTitle: 'Custom Software Development | SWD',
