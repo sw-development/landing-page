@@ -53,7 +53,6 @@ const index: FC = () => {
   useEffect(() => {
     const inputs = document.querySelectorAll('#input-field');
     const navigationWrapper: HTMLMenuElement = document.querySelector('#navigation-wrapper');
-    console.log(inputs)
 
     inputs.forEach((input) => {
       input.addEventListener('focusin', () => handleFocusIn(navigationWrapper));

@@ -26,7 +26,6 @@ const index: FC = () => {
 
   const onSubmit = (): void => {
     recaptchaRef.current.execute();
-    console.log('ELO');
   };
 
   const onRecaptchaResolved = async (): Promise<void> => {
