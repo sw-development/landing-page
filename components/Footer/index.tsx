@@ -18,9 +18,9 @@ const Footer = () => {
       <span>&copy; 2021 SW Development</span>
       <a
         className={styles.footer__email}
-        href="mailto:swdevelopmentinfo@gmail.com"
+        href="mailto:contact@sw-devs.com"
       >
-        swdevelopmentinfo@gmail.com
+        contact@sw-devs.com
       </a>
     </footer>
   );
