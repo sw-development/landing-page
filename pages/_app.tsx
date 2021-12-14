@@ -18,6 +18,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="twitter:title" content={dictionary.socialMediaTitle} />
         <meta name="twitter:description" content={dictionary.twitterImage} />
         <meta name="twitter:image" content="/assets/twitter-image.jpg" />
+        <meta name="google-site-verification" content="UUnejpC-YAZJJQVu2EpS120SOlVNgW9pbwBcW4E50FI" />
       </Head>
       <Component {...pageProps} />
     </>
