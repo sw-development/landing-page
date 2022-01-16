@@ -1,0 +1,66 @@
+.blog__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px 25px;
+  color: $black;
+  position: relative;
+
+  @include largeTablet() {
+    padding: 80px;
+  }
+
+  @include desktop() {
+    padding: 100px;
+  }
+}
+
+.blog__content__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  img {
+    margin-top: 8px;
+  }
+
+  @include desktop() {
+    gap: 25px;
+
+    img {
+      margin-top: 30px;
+    }
+  }
+}
+
+.blog__description {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1.92px;
+  font-weight: $weightLight;
+
+  @include desktop() {
+    font-size: 20px;
+  }
+}
+
+.blog__title {
+  font-size: $font-sm;
+  line-height: 1.2;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+
+  @include largeTablet {
+    font-size: $font-md;
+  }
+
+  @include smallDesktop {
+    font-size: 42px;
+  }
+
+  @include desktop {
+    font-size: $font-lg;
+  }
+}

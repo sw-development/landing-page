@@ -74,6 +74,10 @@ export default {
           "Our vision is to create solutions matched to Your needs and criterias. Let's fulfill it together.",
       },
     },
+    blog: {
+      description: "Blog",
+      title: "Check what Our team have to say!"
+    }
   },
   common: {
     buttons: {

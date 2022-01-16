@@ -74,6 +74,10 @@ export default {
           'Naszą wizją jest tworzenie produktów dopasowanych idealnie do Twoich potrzeb oraz wymagań. Spełnijmy ją razem.',
       },
     },
+    blog: {
+      description: "Blog",
+      title: "Sprawdź co piszą nasi eksperci!"
+    }
   },
   common: {
     buttons: {
