@@ -3,9 +3,13 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 40px 25px;
+  padding: 40px 15px;
   color: $black;
   position: relative;
+
+  @include mobile() {
+    padding: 40px 25px;
+  }
 
   @include largeTablet() {
     padding: 80px;
@@ -22,12 +26,13 @@
   align-items: center;
   justify-content: center;
   gap: 15px;
+
   img {
     margin-top: 8px;
   }
 
   @include desktop() {
-    gap: 25px;
+    gap: 50px;
 
     img {
       margin-top: 30px;
@@ -40,6 +45,10 @@
   text-transform: uppercase;
   letter-spacing: 1.92px;
   font-weight: $weightLight;
+
+  @include mobile() {
+    font-size: 18px;
+  }
 
   @include desktop() {
     font-size: 20px;
@@ -62,5 +71,23 @@
 
   @include desktop {
     font-size: $font-lg;
+  }
+}
+
+.blog__list__wrapper {
+  display: grid;
+  gap: 30px;
+  width: 100%;
+  grid-template-columns: 1fr;
+  margin-top: 75px;
+  justify-items: center;
+
+  @include largeTablet {
+    grid-template-columns: 1fr 1fr;
+    margin-top: 110px;
+  }
+
+  @include desktop {
+    margin-top: 150px;
   }
 }
