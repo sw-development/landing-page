@@ -3,20 +3,32 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 40px 15px;
+  padding: 50px 15px;
   color: $black;
   position: relative;
 
   @include mobile() {
-    padding: 40px 25px;
+    padding: 50px 25px;
+  }
+
+  @include tablet() {
+    padding: 100px;
+    padding-top: 120px;
+  }
+}
+
+.blog__wrapper__subpage {
+  padding: 50px 15px;
+  padding-top: 100px;
+
+  @include mobile() {
+    padding: 50px 25px;
+    padding-top: 140px;
   }
 
   @include largeTablet() {
-    padding: 80px;
-  }
-
-  @include desktop() {
     padding: 100px;
+    padding-top: 180px;
   }
 }
 
