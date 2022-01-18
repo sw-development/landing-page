@@ -63,7 +63,7 @@ const index = (): JSX.Element => {
         } ${scrolled && !isActive && styles.hamburger__wrapper__sticky}`}
         ref={hamburgerWrapperRef}
       >
-        <Link href="#home">
+        <Link href="/#home">
           <a>
             <img src="/assets/logo-mobile.png" alt="logo" />
           </a>
@@ -86,7 +86,7 @@ const index = (): JSX.Element => {
       >
         <nav className={styles.navigation}>
           <div onClick={handleNavItemClick}>
-            <Link href="#home">
+            <Link href="/#home">
               <a>
                 <img src="/assets/logo.png" alt="logo" />
               </a>
@@ -98,27 +98,27 @@ const index = (): JSX.Element => {
             }`}
           >
             <li onClick={handleNavItemClick}>
-              <Link href="#home">
+              <Link href="/#home">
                 <a>{dictionary.components.menu.labels.home}</a>
               </Link>
             </li>
             <li onClick={handleNavItemClick}>
-              <Link href="#about">
+              <Link href="/#about">
                 <a>{dictionary.components.menu.labels.aboutUs}</a>
               </Link>
             </li>
             <li onClick={handleNavItemClick}>
-              <Link href="#services">
+              <Link href="/#services">
                 <a>{dictionary.components.menu.labels.services}</a>
               </Link>
             </li>
             <li onClick={handleNavItemClick}>
-              <Link href="#ourGoal">
+              <Link href="/#ourGoal">
                 <a>{dictionary.components.menu.labels.ourGoal}</a>
               </Link>
             </li>
             <li onClick={handleNavItemClick}>
-              <Link href="#contact">
+              <Link href="/#contact">
                 <a className={`${styles.btn} ${styles['btn--outline']}`}>
                   {dictionary.components.menu.labels.contactUs}
                 </a>

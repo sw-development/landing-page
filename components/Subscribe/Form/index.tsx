@@ -7,6 +7,7 @@ import { SubscribeFormData } from '@/../../infrastructure/interfaces/Forms/Conta
 import { CHECK_IF_EMAIL_REGEX } from '@/../../utils/constants';
 import { handleAddSubscriber } from '@/../../repositories/contact';
 import ReCAPTCHA from 'react-google-recaptcha';
+import { useRouter } from 'next/router';
 
 const defaultValues: SubscribeFormData = {
   email: '',
@@ -23,6 +24,8 @@ const index: FC = () => {
     getValues,
   } = useForm<SubscribeFormData>({ defaultValues });
   const recaptchaRef = useRef<ReCAPTCHA>(null);
+  const router = useRouter();
+  const requireDarkTheme = router.pathname.includes('/blog');
 
   const onSubmit = (): void => {
     recaptchaRef.current.execute();
@@ -54,8 +57,8 @@ const index: FC = () => {
                 dictionary.forms.mainContactForm.fields.fullName.label
               }
               classes={{
-                root: styles.subscribe__form__customInputRoot,
-                input: styles.subscribe__form__customInput,
+                root: `${styles.subscribe__form__customInputRoot} ${requireDarkTheme ? styles.subscribe__form__customInputRoot__dark : ''}`,
+                input: requireDarkTheme ? styles.subscribe__form__customInput__dark : styles.subscribe__form__customInput,
               }}
               {...field}
               id="input-field"
@@ -83,8 +86,8 @@ const index: FC = () => {
             <Input
               type="email"
               classes={{
-                root: styles.subscribe__form__customInputRoot,
-                input: styles.subscribe__form__customInput,
+                root: `${styles.subscribe__form__customInputRoot} ${requireDarkTheme ? styles.subscribe__form__customInputRoot__dark : ''}`,
+                input: requireDarkTheme ? styles.subscribe__form__customInput__dark : styles.subscribe__form__customInput,
               }}
               placeholder={dictionary.forms.mainContactForm.fields.email.label}
               {...field}
@@ -119,7 +122,7 @@ const index: FC = () => {
       />
       <button
         type="submit"
-        className={`${styles.btn} ${styles['btn--outline']}`}
+        className={`${styles.btn} ${styles['btn--outline']} ${requireDarkTheme ? styles.dark__theme__color : ''}`}
       >
         {dictionary.common.buttons.subscribe}
       </button>

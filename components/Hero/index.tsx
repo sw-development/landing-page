@@ -86,7 +86,7 @@ const Hero = () => {
         <p className={styles.hero__description}>
           {dictionary.components.hero.description}
         </p>
-        <Link href="#services">
+        <Link href="/#services">
           <button type="button" className={styles.btn}>
             {dictionary.components.hero.button}
           </button>

@@ -62,9 +62,28 @@
   padding-left: 2px;
 }
 
+.subscribe__form__customInputRoot__dark {
+  color: $white !important;
+
+  &:before {
+    border-bottom: 1px solid rgba($white, 0.7) !important;
+  }
+}
+
 .subscribe__form__customInput {
   &::placeholder {
-    color: rgba($black, .5) !important;
+    color: rgba($black, 0.5) !important;
     opacity: 1 !important;
   }
+}
+
+.subscribe__form__customInput__dark {
+  &::placeholder {
+    color: rgba($white, 0.5) !important;
+    opacity: 1 !important;
+  }
+}
+
+.dark__theme__color {
+  color: $white;
 }

@@ -82,6 +82,7 @@ export default {
   common: {
     buttons: {
       knowMore: 'Sprawdź więcej',
+      readMore: 'Czytaj więcej',
       submit: 'Wyślij',
       subscribe: 'Subskrybuj',
     },

@@ -103,3 +103,26 @@
     margin-top: 150px;
   }
 }
+
+.blog__footer__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0px;
+
+  @include mobile() {
+    margin: 60px;
+  }
+
+  @include tablet() {
+    margin: 80px;
+  }
+
+  @include largeTablet() {
+    margin: 100px;
+  }
+
+  @include desktop() {
+    margin: 120px;
+  }
+}

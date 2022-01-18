@@ -25,7 +25,7 @@ const Design = () => {
         <p className={styles.description}>
           {dictionary.components.design.description}
         </p>
-        <Link href="#contact">
+        <Link href="/#contact">
           <button type="button" className={styles.btn}>
             {dictionary.common.buttons.knowMore}
           </button>

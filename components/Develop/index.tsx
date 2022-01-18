@@ -25,7 +25,7 @@ const Develop = () => {
           <p className={styles.description}>
             {dictionary.components.develop.description}
           </p>
-          <Link href="#contact">
+          <Link href="/#contact">
             <button
               type="button"
               className={`${styles.btn} ${styles['btn--outline']}`}

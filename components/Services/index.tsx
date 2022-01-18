@@ -24,7 +24,7 @@ const index = (): JSX.Element => {
           <h2 className={styles.services__title}>
             {dictionary.components.services.main.title}
           </h2>
-          <Link href="#contact">
+          <Link href="/#contact">
             <a className={`${styles.link} ${styles['link--outline']}`}>
               {dictionary.components.services.main.button}
               <img

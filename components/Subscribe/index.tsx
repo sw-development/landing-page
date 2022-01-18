@@ -3,14 +3,17 @@ import { useTranslation } from '../../hooks/useTranslation';
 import styles from './subscribe.module.scss';
 import Form from './Form/index';
 import useScrollReveal from '../../hooks/useScrollReveal';
+import { useRouter } from 'next/router';
 
 const index: FC = () => {
   const { dictionary } = useTranslation();
   const sectionRef = useRef<HTMLDivElement>(null);
+  const router = useRouter();
+  const requireDarkTheme = router.pathname.includes('/blog');
   useScrollReveal({ sectionRef });
 
   return (
-    <div className={styles.subscribe__wrapper} id="subscribe" ref={sectionRef}>
+    <div className={`${styles.subscribe__wrapper} ${requireDarkTheme ? styles.dark__theme : ''}`} id="subscribe" ref={sectionRef}>
       <img
         className={styles.subscribe__yellow__decor}
         src="/assets/subscribeYellowDecor.svg"
