@@ -27,7 +27,7 @@ const index = () => {
           Lorem ipsum dolor amet, a dusino sinto.
         </p>
       </div>
-      <Link href="/#">
+      <Link href="/blog/post/1">
         <a className={styles.preview__link}>
           <span>Continue reading</span>
         </a>

@@ -1,18 +1,20 @@
 import React from 'react';
+import { useRouter } from 'next/router';
 import Navigation from '@/../../components/Navigation/index';
 import Footer from '@/../../components/Footer';
 import Subscribe from '@/../../components/Subscribe';
-import Blog from '@/../../components/Blog';
+import PostContent from '@/../../components/Post/Post';
 
-const index = () => {
+const Post = () => {
+  const { slug } = useRouter().query;
   return (
     <>
       <Navigation />
-      <Blog />
+      <PostContent />
       <Subscribe />
       <Footer />
     </>
   );
 };
 
-export default index;
+export default Post;
