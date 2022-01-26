@@ -1,7 +1,14 @@
 import { BlogPostsAction } from './actions';
 
 export interface Post {
+  id: string;
   slug: string;
+  description: string;
+  title: string;
+  timestamp: string;
+  previewImg: {
+    url: string
+  }
 }
 
 export interface Paging {
@@ -18,5 +25,5 @@ export interface BlogPostsState {
 
 export interface UseBlogPostsState {
   state: BlogPostsState;
-  dispatch: BlogPostsAction;
+  dispatch: (action: BlogPostsAction) => void;
 }

@@ -4,9 +4,13 @@ import Navigation from '@/../../components/Navigation/index';
 import Footer from '@/../../components/Footer';
 import Subscribe from '@/../../components/Subscribe';
 import PostContent from '@/../../components/Post/Post';
+import { useBlogPosts } from '../../../context/blogPosts/blogPosts';
 
 const Post = () => {
   const { slug } = useRouter().query;
+  const { state } = useBlogPosts();
+
+  console.log(state);
   return (
     <>
       <Navigation />
