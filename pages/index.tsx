@@ -11,18 +11,12 @@ import Subscribe from '../components/Subscribe';
 import Blog from '@/../../components/Blog';
 import { GraphQLClient, gql } from 'graphql-request';
 
-
-
 export async function getStaticProps() {
-  const client = new GraphQLClient(
-    process.env.NEXT_PUBLIC_GRAPH_CMS_API,
-    {
-      headers: {
-        Authorization:
-        `Bearer ${process.env.NEXT_PUBLIC_GRAPH_CMS_TOKEN}`
-      },
-    }
-  );
+  const client = new GraphQLClient(process.env.NEXT_PUBLIC_GRAPH_CMS_API, {
+    headers: {
+      Authorization: `Bearer ${process.env.NEXT_PUBLIC_GRAPH_CMS_TOKEN}`,
+    },
+  });
 
   const query = gql`
     query {
@@ -42,11 +36,10 @@ export async function getStaticProps() {
       results,
     },
   };
-
 }
 
-export default function Home({ results }) {
-  console.log(results);
+export default function Home() {
+
   return (
     <>
       <Navigation />
